@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE-EmulateIE7" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Jquery UI -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <!-- Material Design Lite -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-red.min.css" />
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+
+    <!-- Plugins -->
+    <link rel="stylesheet" href="styles/slick.css">
+    <link rel="stylesheet" href="styles/slick-theme.css">
+    <script src="scripts/slick.min.js"></script>
+    <script src="scripts/jquery.elevatezoom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+    <!-- Youtube API -->
+    <script type="text/javascript" src="http://www.youtube.com/player_api"></script>
+
+    <!-- Page Styles -->
+    <link rel="stylesheet" href="styles/colors.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/pcards.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <!-- Page Scripts -->
+    <script src="scripts/header.js"></script>
+    <script src="scripts/index.js"></script>
+    <title>Marko Informática</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Parisienne&display=swap" rel="stylesheet">
+</head>
+<body class="background--bg">
+
+<!-- ?php if ($type == 'HOME'): ?-->
+<!-- Home -->
+<div id="header">
+    <div class="header-top primary-dark--bg large-only"></div>
+    <div id="header-bar" class="shadow header-row large-only">
+        <a href="index" class="flex center logo"><img src="images/logo_branco.png" alt="MARKO"/></a>
+        <div class="space"></div>
+        <a class="no-link item text-light " href="index">Marko</a>
+        <a class="no-link item text-light " href="solution">Solution</a>
+        <a class="no-link item text-light " href="produtos">Produtos</a>
+        <a class="no-link item text-light " href="info">Informações</a>
+        <a class="no-link item text-light " href="login">Entrar</a>
+        <a class="no-link item text-light sell" href="carrinho"><i class="material-icons">shopping_cart</i></a>
+    </div>
+    <div class="flex ver primary--bg shadow--medium">
+        <div class="header-row small-only">
+            <button class="small-only mdl-button mdl-js-button mdl-button--icon sell" onclick="window.location.href='carrinho'"><i class="material-icons mdl-badge mdl-badge--overlap text-light"  data-badge="1">shopping_cart</i></button>
+        </div>
+    </div>
+</div>
+<button id="hamburger" class="small-only mdl-button mdl-js-button mdl-button--icon"><i class="material-icons text-light">dehaze</i></button>
+<!--?php endif ?-->
+
+<!-- Drawer -->
+<div id="drawer" class="shadow--mediumr surface--bg small-only" style="left : -256px">
+    <div class="header surface--bg"></div>
+    <hr>
+    <div class="nav flex ver surface--bg">
+        <a href="index" class="no-link flex hor"><i class="material-icons text-dark-sub">home</i><span class="text-dark">Marko</span></a>
+        <a href="solution" class="no-link flex hor"><i class="material-icons text-dark-sub">assessment</i><span class="text-dark">Solution</span></a>
+        <a href="produtos" class="no-link flex hor"><i class="material-icons text-dark-sub">dashboard</i><span class="text-dark">Produtos</span></a>
+        <a href="info" class="no-link flex hor"><i class="material-icons text-dark-sub">info</i><span class="text-dark">Informações</span></a>
+        <a href="login" class="no-link flex hor"><i class="material-icons text-dark-sub">account_circle</i><span class="text-dark">Entrar</span></a>
+        <a href="carrinho" class="no-link flex hor sell"><i class="material-icons text-dark-sub">shopping_cart</i><span class="text-dark">Carrinho</span></a>
+    </div>
+</div>
+<div id="drawer-block" class="small-only" style="opacity : 0; display : none;"></div>
+<div id="whatss" class="surface--bg shadow--medium flex hor center text-light" style="background-color: #0DC143" onclick="window.open('https://wa.me/5586981782694')">
+    <img src="images/whats-ico.svg">
+    <span class="text">Atendimento<br>Whatsapp</span>
+</div>
+
+<!-- Conteúdo -->
+<div class="page-content flex ver centerH">
+    <div id="header-bg" class="section--strech shadow--medium" style="background-image: url('images/produtos_header_bg.jpg'"></div>
+    <div class="section line flex hor center">
+        <a href="index" class="no-link flex hor center text-dark-sub chip"><i class="material-icons">home</i>Marko</a>
+        <a href="produtos" class="no-link text-dark-sub chip">Todos os Produtos</a>
+        <a href="produtos?tags=<?php echo $row[classe]?>" class="no-link text-dark-sub chip"><?php echo $row["classe"]?></a>
+        <a href="produtos?tags=<?php echo $row[subclasse]?>" class="no-link text-dark-sub chip"><?php echo $row["subclasse"]?></a>
+    </div>
+    <div class="section--strech flex center">
+        <div class="section flex ver center">
+            <div class="dblock">
+                <div class="images surface--bg shadow--small">
+                    <div id="image-show" class="image img--bg">
+                        <img id="zoom_01"
+                             src='uploads/<?php echo count($row["imagens"]) > 0 ? $row["imagens"][0] : "vazio.png"?>'
+                             data-zoom-image="uploads/<?php echo count($row[imagens]) > 0 ? $row[imagens][0] : vazio.png??>"/>
+                    </div>
+                    <hr>
+                    <div class="galery-wrapper">
+                        <div class="galery flex">
+                            <?php
+                            foreach ($row["imagens"] as $val) {
+                                echo "<div class=\"btn gray--btn\" style=\"background-image: url('uploads/".$val."\" onclick=\"imageShow('uploads/".$val."')\"></div>";
+                        }
+                        ?>
+                    </div>
+                </div>
+            </div>
+            <div class="detail flex ver">
+                <h1 class="text-dark"><?php echo $row["nome"]?></h1>
+                <div class="title"><b class="text-dark-sub">Disponibilidade :</b> <span class="text-dark">Sob Consulta</span></div>
+                <div class="title"><b class="text-dark-sub">Código do Produto :</b> <span class="text-dark"><?php echo $row["shop9_id"]?></span></div>
+                <div class="title"><b class="text-dark-sub">Marca :</b> <span class="text-dark"><?php echo $row["marca"]?></span></div>
+                <hr>
+                <div class="description flex ver">
+                    <div class="flex hor" style="flex-grow: 1;"><?php echo $row["descricao"]?></div>
+                    <div class="flex hor centerH">
+                        <?php
+                            if (count($row["cores"]) == 0 || $row["cores"][0]["nome"] == "NENHUMA") {
+
+                            } else {
+                                echo 'Selecione a cor :';
+                                foreach ($row["cores"] as $val) {
+                                    if ($val["id"] == $_GET["id"]) {
+                                        echo "<a class=\"description-color selected\" style=\"".$val["css"]."\" href=\"detalhe?id=".$val["id"]."\"></a>";
+                        } else {
+                        echo "<a class=\"description-color\" style=\"".$val["css"]."\" href=\"detalhe?id=".$val["id"]."\"></a>";
+                        }
+                        }
+                        }
+                        ?>
+                    </div>
+                </div>
+
+                <div class="extras flex hor">
+                    <div id="semjuros" class="entry no-select flex hor centerH hint--bg"><i class="material-icons text-light">credit_card</i><span class="text-light">Sem Juros</span></div>
+                    <div id="fretegratis" class="entry no-select flex hor centerH hint--bg"><i class="material-icons text-light">local_shipping</i><span class="text-light">Frete Grátis</span></div>
+                    <div id="garantia" class="entry no-select flex hor centerH hint--bg"><i class="material-icons text-light">monetization_on</i><span class="text-light">Garantia</span></div>
+                    <div id="suporte" class="entry no-select flex hor centerH hint--bg"><i class="material-icons text-light">help_outline</i><span class="text-light">Suporte</span></div>
+
+                    <div class="mdl-tooltip" data-mdl-for="semjuros">
+                        Sem Juros
+                    </div>
+                    <div class="mdl-tooltip" data-mdl-for="fretegratis">
+                        Frete Grátis
+                    </div>
+                    <div class="mdl-tooltip" data-mdl-for="garantia">
+                        <?php echo $row["garantia"]?>
+                    </div>
+                    <div class="mdl-tooltip" data-mdl-for="suporte">
+                        Suporte
+                    </div>
+                </div>
+                <hr class="sell">
+                <div class="final flex sell">
+                    <div class="text">
+                        <div class="price text-primary">R$ 1.200,00</div>
+                        <div class="price2 text-dark-sub">ou até 10x de R$ 120,00 <a href="">[Tabela]</a></div>
+                    </div>
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent  mdl-js-ripple-effect btnfinal">COMPRAR</button>
+                </div>
+            </div>
+            <div class="large-extras flex ver">
+                <div class="entry no-select flex hor centerH hint--bg"><i class="material-icons text-light">credit_card</i><span class="text-light">Sem Juros</span></div>
+                <div class="entry no-select flex hor centerH hint--bg"><i class="material-icons text-light">local_shipping</i><span class="text-light">Frete Grátis</span></div>
+                <div class="entry no-select flex hor centerH hint--bg"><i class="material-icons text-light">monetization_on</i><span class="text-light">Garantia</span></div>
+                <div class="entry no-select flex hor centerH hint--bg"><i class="material-icons text-light">help_outline</i><span class="text-light">Suporte</span></div>
+            </div>
+        </div>
+        <h3 class="no-margin text-dark separator" style="width: 100%">Mais Informações</h3>
+        <hr class="separator">
+        <div class="table surface--bg shadow--small">
+            <main class="mdl-layout__content">
+                <div class="mdl-tabs mdl-js-tabs">
+                    <div class="mdl-tabs__tab-bar" style="justify-content: start">
+                        <a href="#tab1-panel" class="mdl-tabs__tab is-active">Detalhes</a>
+                        <a href="#tab2-panel" class="mdl-tabs__tab">Vídeos</a>
+                    </div>
+
+                    <div class="mdl-tabs__panel page is-active" id="tab1-panel">
+                        <?php echo $row["detalhes"]?>
+                    </div>
+                    <div class="mdl-tabs__panel page video" id="tab2-panel">
+                        <iframe frameborder="0" height="100%" width="100%"
+                                src="https:\\www.youtube.com\embed\<?php echo $row[video]?>?controls=0&showinfo=0&autohide=1">
+                        </iframe>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <h3 class="no-margin text-dark separator" style="width: 100%">Produtos Semelhantes</h3>
+        <hr class="separator">
+        <div class="carrosel" style="width: 100%">
+            <div class="items">
+                <?php $related = getRelated($_GET["id"]); ?>
+                <?php foreach($related as &$row) :; ?>
+                <div class="pcard surface--bg shadow--btn flex ver" onclick="window.location.href='detalhe?id=<?php echo $row[id]?>'">
+                <div class="pimg surface--bg" style="background-image: url('uploads/<?php echo $row[imagem]?>')"></div>
+            <hr>
+            <div class="pcontent flex ver">
+                <div class="name text-dark-sub"><?php echo $row["nome"]?></div>
+                <div class="price text-primary sell">R$ 50,00</div>
+                <div class="price-part text-primary sell">até 10x de R$ 5,00</div>
+            </div>
+
+            <?php if ($row["promocao"] == 1): ?>
+            <div class="psale flex ver center sale">Promoção</div>
+            <?php endif; ?>
+        </div>
+        <?php endforeach;?>
+    </div>
+</div>
+
+<!-- Footer -->
+<div id="footer">
+    <div id="rodape" class="flex ver center footer--bg">
+        <div class="section">
+            <div class="group">
+                <div class="title text-light">MARKO INFORMÁTICA</div>
+                <div class="subtitle s space text-light-sub">Pode contar com a gente</div>
+                <div class="subtitle s text-light">Rua Dr. Area Leão, 278 N, Praça Fripisa</div>
+                <div class="subtitle s space text-light-sub">Expediente: 8h às 18h</div>
+                <div class="subtitle g text-light">86.2106-5000</div>
+                <div class="subtitle m text-light-sub">marketing@grupomarko.com.br</div>
+            </div>
+            <div class="group">
+                <div class="title space text-light">Novos Produtos</div>
+                <a href="detalhe" class="no-link">
+                    <div class="subtitle m text-light">Impressora exemplo</div>
+                    <div class="subtitle s text-light-sub space">Descrição simples da impressora exemplo</div>
+                </a>
+                <a href="detalhe" class="no-link">
+                    <div class="subtitle m text-light">Impressora exemplo</div>
+                    <div class="subtitle s text-light-sub space">Descrição simples da impressora exemplo</div>
+                </a>
+                <a href="detalhe" class="no-link">
+                    <div class="subtitle m text-light">Impressora exemplo</div>
+                    <div class="subtitle s text-light-sub space">Descrição simples da impressora exemplo</div>
+                </a>
+            </div>
+            <div class="group large-only">
+                <div class="title space text-light">Informações</div>
+                <div class="subtitle m space text-light">- Termos de Uso</div>
+                <div class="subtitle m space text-light">- Política de Privacidade</div>
+                <div class="subtitle m space text-light">- Contatos</div>
+                <div class="subtitle m text-light">- Sobre</div>
+            </div>
+        </div>
+    </div>
+    <div id="rodape_rodape" class="section--strech flex ver center">
+        <div class="section flex hor">
+            <a href="" class="no-link text-light">© Marko Informática</a>
+            <a href="" class="no-link large-only text-light">Sobre</a>
+            <a href="" class="no-link large-only text-light">Termos de Uso</a>
+            <a href="" class="no-link large-only text-light">Política de Privacidade</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

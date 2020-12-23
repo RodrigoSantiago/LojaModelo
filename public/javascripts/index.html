@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE-EmulateIE7" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Jquery UI -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <!-- Material Design Lite -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-red.min.css" />
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+
+    <!-- Plugins -->
+    <link rel="stylesheet" href="styles/slick.css">
+    <link rel="stylesheet" href="styles/slick-theme.css">
+    <script src="scripts/slick.min.js"></script>
+    <script src="scripts/jquery.elevatezoom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+    <!-- Youtube API -->
+    <script type="text/javascript" src="http://www.youtube.com/player_api"></script>
+
+    <!-- Page Styles -->
+    <link rel="stylesheet" href="styles/colors.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/pcards.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <!-- Page Scripts -->
+    <script src="scripts/header.js"></script>
+    <script src="scripts/index.js"></script>
+    <title>Marko Informática</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Parisienne&display=swap" rel="stylesheet">
+</head>
+<body class="background--bg">
+
+<!-- Home -->
+<div id="header">
+    <div class="header-top primary-dark--bg large-only"></div>
+    <div id="header-bar" class="header-row large-only">
+        <a href="index" class="flex center logo"><img id="header-logo" src="images/logo_branco.png" alt="MARKO"/></a>
+        <div class="space"></div>
+        <a class="no-link item text-light header-selected" href="index">Marko</a>
+        <a class="no-link item text-light " href="solution">Solution</a>
+        <a class="no-link item text-light " href="produtos">Produtos</a>
+        <a class="no-link item text-light " href="info">Informações</a>
+        <a class="no-link item text-light " href="login">Entrar</a>
+        <a class="no-link item text-light sell" href="carrinho"><i class="material-icons">shopping_cart</i></a>
+    </div>
+    <div id="header-bar-home" class="header-row small-only">
+        <div id="debug"></div>
+        <button class="small-only mdl-button mdl-js-button mdl-button--icon sell" onclick="window.location.href='carrinho'"><i class="material-icons mdl-badge mdl-badge--overlap text-light"  data-badge="1">shopping_cart</i></button>
+    </div>
+</div>
+<button id="hamburger" class="small-only mdl-button mdl-js-button mdl-button--icon"><i class="material-icons text-light">dehaze</i></button>
+
+<!-- Drawer -->
+<div id="drawer" class="shadow--mediumr surface--bg small-only" style="left : -256px">
+    <div class="header surface--bg"></div>
+    <hr>
+    <div class="nav flex ver surface--bg">
+        <a href="index" class="no-link flex hor"><i class="material-icons text-dark-sub">home</i><span class="text-dark">Marko</span></a>
+        <a href="solution" class="no-link flex hor"><i class="material-icons text-dark-sub">assessment</i><span class="text-dark">Solution</span></a>
+        <a href="produtos" class="no-link flex hor"><i class="material-icons text-dark-sub">dashboard</i><span class="text-dark">Produtos</span></a>
+        <a href="info" class="no-link flex hor"><i class="material-icons text-dark-sub">info</i><span class="text-dark">Informações</span></a>
+        <a href="login" class="no-link flex hor"><i class="material-icons text-dark-sub">account_circle</i><span class="text-dark">Entrar</span></a>
+        <a href="carrinho" class="no-link flex hor sell"><i class="material-icons text-dark-sub">shopping_cart</i><span class="text-dark">Carrinho</span></a>
+    </div>
+</div>
+<div id="drawer-block" class="small-only" style="opacity : 0; display : none;"></div>
+<div id="whatss" class="surface--bg shadow--medium flex hor center text-light" style="background-color: #0DC143" onclick="window.open('https://wa.me/5586981782694')">
+    <img src="images/whats-ico.svg">
+    <span class="text">Atendimento<br>Whatsapp</span>
+</div>
+
+<!-- Conteúdo -->
+<div class="page-content flex ver center">
+    <!-- Inicio -->
+    <div class="banners">
+        <div class="banners-container">
+            <div class="banner no-select" style="z-index:2; background: url('images/header_01.jpg') center center; background-size: cover; ">
+            </div>
+            <div class="banner no-select" style="background: url('images/header_02.jpg') center center; background-size: cover; ">
+            </div>
+            <div class="banner no-select" style="background: url('images/header_03.jpg') center center; background-size: cover; ">
+            </div>
+            <div class="banner no-select" style=" background: url('images/header_04.jpg') center center; background-size: cover; ">
+            </div>
+        </div>
+        <div class="banners-title flex ver center" style="background: url('images/index_header_gradiente.png') center center; background-size: 100% 100%; ">
+            <div style="background : url('images/pattern.png') repeat; position : absolute; left : 0; right : 0; bottom : 0; top : 0; z-index : -1"></div>
+            <div class="box"></div>
+            <div class="text no-select">
+                <svg id="Camada_2" data-name="Camada 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 560.09 82.46" style="transform: rotate(-3deg)">
+                    <defs><style>.cls-1,.cls-3{fill:none;}.cls-2{clip-path:url(#clip-path);}.cls-3{stroke:#FFF;stroke-linecap:round;stroke-linejoin:round;stroke-width:12px;}
+                    </style>
+                        <clipPath id="clip-path" transform="translate(-25.13 -19.27)">
+                            <path class="cls-1" d="M50.45,39.34a5.52,5.52,0,0,0-1.06-3.57,3.84,3.84,0,0,0-3.15-1.31,6.41,6.41,0,0,0-4.66,2.17,20.58,20.58,0,0,0-3.75,5.64l.36-5.61a8.7,8.7,0,0,0,.06-1.16q0-4.45-2.47-6.1a10,10,0,0,0-5.7-1.65,15,15,0,0,0-1.74.09,7.66,7.66,0,0,0-.94.16,11.39,11.39,0,0,1,.24,2.86q0,2.32-.34,6.41c-.22,2.72-.35,4.41-.39,5.06q-.56,7.08-.83,11.2c-.18,2.74-.27,5.48-.27,8.2a43.84,43.84,0,0,0,1.25,11.74c.83,2.87,2.27,4.3,4.3,4.3a9.41,9.41,0,0,0,4.06-1.16A5.06,5.06,0,0,0,38.25,74c-.89-.57-1.34-4-1.34-10.37,0-1.79,0-3.15.06-4.09A25.29,25.29,0,0,0,43.9,53.8a30.49,30.49,0,0,0,4.81-7.53A17.55,17.55,0,0,0,50.45,39.34ZM45,44.83a28.28,28.28,0,0,1-3.29,6.29,19.05,19.05,0,0,1-4.61,4.82v-.49a91.57,91.57,0,0,1,3.09-11.87q2.1-6.49,4.54-6.49a1.19,1.19,0,0,1,1.1.64,3.52,3.52,0,0,1,.36,1.74A16,16,0,0,1,45,44.83Zm76.93,15.5a50,50,0,0,1-6.23,6.07q-3.25,2.66-5.33,2.65c-1.51,0-2.26-1.24-2.26-3.72q0-.49.12-1.83a13.5,13.5,0,0,0,4.48-.64,6.08,6.08,0,0,0,3.45-2.65,7.44,7.44,0,0,0,1.22-3.79,4.29,4.29,0,0,0-.91-2.74,4.7,4.7,0,0,0-2.26-1.59,9.63,9.63,0,0,0-2.62-.3,13.45,13.45,0,0,0-7.72,2.47,10.5,10.5,0,0,0-4,5.74l-.17.21a18.09,18.09,0,0,1-3.63,3.11,2.35,2.35,0,0,1-1.22.42Q93,63.74,93,58.07a67.5,67.5,0,0,1,.49-7.56q.48-4.34,1.34-10.31.61-4.34.79-5.8c.08-.73.13-1.26.13-1.58,0-2.44-.72-4.22-2.14-5.34a9.52,9.52,0,0,0-4.82-2c-1.79-.23-2.68-.26-2.68-.1s.06,1.16.06,3q0,5.07-.31,11.56t-1,11.68a15.81,15.81,0,0,0-3.54-.42A13.16,13.16,0,0,0,75,52.76a10.47,10.47,0,0,0-2.5,2h0l-.91.36-.43.19-.24.06-.25.12-.48.12-.49.18a14.15,14.15,0,0,1-2,.55c-.37.08-1.06.23-2.08.43H65.4a11.52,11.52,0,0,0-1.83-5.58A7.57,7.57,0,0,0,59.48,48a7.07,7.07,0,0,0-2.19-.3,9.39,9.39,0,0,0-6.2,2.47,13.78,13.78,0,0,0-4.17,6.5,15.63,15.63,0,0,0-.74,4.63,11.61,11.61,0,0,0,1.62,6.19A7.69,7.69,0,0,0,52.16,71a7,7,0,0,0,2.26.37,9.24,9.24,0,0,0,6.13-2.53,14.34,14.34,0,0,0,4.18-6.5,15.73,15.73,0,0,0,.55-2.2l1-.24c.9-.28,1.65-.55,2.26-.79l1.86-.8a7.3,7.3,0,0,0-.4,2.32,4.88,4.88,0,0,0,1,3,4.77,4.77,0,0,0,2.93,1.71,6.08,6.08,0,0,0,1.46.18A8.23,8.23,0,0,0,80.13,64a11.25,11.25,0,0,0,3.39-3.57,25.78,25.78,0,0,0-.31,3.72,7.88,7.88,0,0,0,1,4.3,4.23,4.23,0,0,0,3.5,1.74,12.86,12.86,0,0,0,8.85-2.41A25.44,25.44,0,0,0,99,65.67c0,.13,0,.27,0,.39,0,2.56.58,4.5,1.74,5.8a6,6,0,0,0,4.73,2,14.94,14.94,0,0,0,7.07-2.14,32.46,32.46,0,0,0,7.75-6.13A41.72,41.72,0,0,0,127,56.18l-1.22-1A29.44,29.44,0,0,1,121.92,60.33Zm-8.82-4.88a1.79,1.79,0,0,1,1.4.61,2.07,2.07,0,0,1,.43,1.34,3.7,3.7,0,0,1-.36,1.65c-1.06,2.15-3.1,3.13-6.1,2.92C109.24,57.42,110.78,55.24,113.1,55.45ZM62.65,62.4a11.36,11.36,0,0,1-2.28,4.3,4.15,4.15,0,0,1-3,1.68,2.07,2.07,0,0,1-1.89-1.22A6.51,6.51,0,0,1,54.85,64a12.58,12.58,0,0,1,.61-3.91c.32-.81.52-1.32.61-1.52l.48.36A7.16,7.16,0,0,0,58.69,60a9.29,9.29,0,0,0,1.28.31,4.22,4.22,0,0,0,.76.15l.52,0a10.78,10.78,0,0,0,1.89-.06A15.18,15.18,0,0,1,62.65,62.4Zm-1-5.67a1.27,1.27,0,0,1-.43-.09,1.14,1.14,0,0,0-.37-.09,1.64,1.64,0,0,1-.67-.31,3.48,3.48,0,0,1-1-.73,2.62,2.62,0,0,1-.49-.61,4,4,0,0,1,2.07-.79,1.88,1.88,0,0,1,1.53.76,4.66,4.66,0,0,1,.85,2A6.08,6.08,0,0,1,61.68,56.73Zm19.76,2.5a5.26,5.26,0,0,1-3.35,1.83A1.35,1.35,0,0,1,77,60.57a2.12,2.12,0,0,1-.4-1.4,3.54,3.54,0,0,1,2.53-3.75,15.82,15.82,0,0,1,5.28-.77A12.32,12.32,0,0,1,81.44,59.23ZM286.7,55.94a2.68,2.68,0,0,0-.61.06l-.3.06c0,.24-.35,1.75-1,4.51A70.91,70.91,0,0,1,282,69.08a20.44,20.44,0,0,1-3.85,6.62c-.89.93-1.58,1.4-2.07,1.4-.77,0-1.16-1.1-1.16-3.29a88.48,88.48,0,0,1,.92-9.58q.36-2.31.48-3.54c.08-.73.13-1.24.13-1.52q0-4.28-2.69-5.64a10.13,10.13,0,0,0-5.61-1.13,6,6,0,0,1-1.74-.28,1.14,1.14,0,0,1-.88-1.31c.12-1.79-.2-3.05-1-3.78a4.15,4.15,0,0,0-3-1.1,8.82,8.82,0,0,0-1.92.21c-.63.15-1.15.29-1.56.43l-.79.28a5.63,5.63,0,0,1,.25,1.77l-.07,1.46c-.08.73-.12,1.24-.12,1.52a4.26,4.26,0,0,0,.7,2.47,5.26,5.26,0,0,0,2.84,1.68,12.62,12.62,0,0,0,1.88.42l-.08.22a36,36,0,0,1-2.38,5.13,31.35,31.35,0,0,1-4.05,5.7c-.9,1-1.63,1.53-2.2,1.53q-1.77,0-1.77-6.29c0-1.58.1-3.76.3-6.52l.07-1.1c0-2.65-.73-4.46-2.17-5.43a8.73,8.73,0,0,0-5-1.47,10.67,10.67,0,0,0-1.56.1,6.22,6.22,0,0,0-.88.15,10,10,0,0,1,.18,2.13q0,1.29-.06,2a13.57,13.57,0,0,0-2.62-.24,13.34,13.34,0,0,0-7.2,2A9.34,9.34,0,0,0,230,57.49a8.74,8.74,0,0,0-1.22,4.3,5.09,5.09,0,0,0,.59,2.44c-.06.11-.12.2-.19.31a21.62,21.62,0,0,1-3.93,4.82,3.09,3.09,0,0,1-1.83.85c-1,0-1.61-1-1.89-2.9a65.06,65.06,0,0,1-.43-8.81V52.76q.12-5.79.36-10.61l2-.24,2-.25,1.58-.24,1.29-.19a4.42,4.42,0,0,0,.7-.15,1.65,1.65,0,0,1,.33-.09l-.12-1.89H226.8l-1.65.06q-1.22,0-1.89.06l-1.7.06.3-5.37.06-1.09q0-4-2.16-5.43a8.76,8.76,0,0,0-5-1.47,12.22,12.22,0,0,0-1.55.09,8.2,8.2,0,0,0-.89.16,15.65,15.65,0,0,1,.19,2.93c0,2.56-.17,6.22-.49,11l-.25.06q-1.46.12-2.13.24l-1.89.24-2.87.43-.79.12-.31.06.19,1.9h4c.41,0,1.06-.07,2-.07l2-.12q-.54,8.66-.55,15c-.65,1.22-1.28,2.37-1.89,3.41A15.91,15.91,0,0,1,207.59,64a12.71,12.71,0,0,1-1.1,1l-.3.25a.25.25,0,0,1-.16.06.2.2,0,0,0-.15.06q-.12,0-.12.06h-.18l-.19.06h-.06l-.12-.06-.06-.06-.18-.61a17.3,17.3,0,0,1-.07-2c.09-1.06.17-1.83.25-2.32v-.37a10,10,0,0,0,.12-1.34c.2-1.83.31-3.07.31-3.72,0-2.6-.7-3.9-2.08-3.9a4.06,4.06,0,0,0-2.87,1.64A22.4,22.4,0,0,0,198,56.61V56.3l.06-1.22q0-4.76-2-6.53a6.93,6.93,0,0,0-4.7-1.76,9.59,9.59,0,0,0-1.4.09,6.46,6.46,0,0,0-.8.15,11.63,11.63,0,0,1,.19,2.26,57.44,57.44,0,0,1-.55,6.08l-.06,0-.25.12-.48.12-.49.18a14.15,14.15,0,0,1-2,.55c-.37.08-1.06.23-2.08.43h-.18a11.52,11.52,0,0,0-1.83-5.58A7.57,7.57,0,0,0,177.27,48a7.07,7.07,0,0,0-2.19-.3,9.39,9.39,0,0,0-6.2,2.47,13.78,13.78,0,0,0-4.17,6.5,16.17,16.17,0,0,0-.68,3.39,47.81,47.81,0,0,1-6.16,5.51q-3.35,2.5-5.43,2.5c-1.58,0-2.37-1.17-2.37-3.53a14,14,0,0,1,.24-2.57q.74-4.57,2.1-5.79a3.45,3.45,0,0,1,2.54-1.1c1.17,0,1.76.71,1.76,2a5.33,5.33,0,0,1-.09,1,3,3,0,0,1-.15.61s.15.15.46.34a2,2,0,0,0,1.07.27,10.87,10.87,0,0,0,1-3.9,3.44,3.44,0,0,0-.76-2.38,4.58,4.58,0,0,0-2.11-1.28,8.91,8.91,0,0,0-2.56-.31,14,14,0,0,0-5,1,11.54,11.54,0,0,0-4.64,3.41,13.19,13.19,0,0,0-2.74,6.47,14.52,14.52,0,0,0-.24,2.68,7.78,7.78,0,0,0,1.92,5.68,6.91,6.91,0,0,0,5.15,2,16.26,16.26,0,0,0,7.2-2,29.91,29.91,0,0,0,7.69-5.77c.44-.44.86-.92,1.28-1.4a10.91,10.91,0,0,0,1.43,4A7.69,7.69,0,0,0,170,71a7,7,0,0,0,2.26.37,9.24,9.24,0,0,0,6.13-2.53,14.34,14.34,0,0,0,4.18-6.5,15.73,15.73,0,0,0,.55-2.2l1-.24c.9-.28,1.65-.55,2.26-.79l2.08-.89c-.13,1-.26,2.1-.37,3.21a39.2,39.2,0,0,0-.25,4.14,11.15,11.15,0,0,0,1,5.19,3.53,3.53,0,0,0,3.39,1.89q4.2,0,5.49-4.88l.54-2q.67-2.62,1.47-4.94c.16-.53.55-1.59,1.16-3.18.32-.73.59-1.28.79-1.64a8,8,0,0,1,.85-1.47l.37-.36c.2-.21.37-.27.49-.19a.58.58,0,0,1,.3.37,18.17,18.17,0,0,1,.06,1.83q0,.68-.12,2.13c-.16,2-.26,3.44-.3,4.46a18.22,18.22,0,0,0,.12,2.38,2.88,2.88,0,0,1,.15.58,1.66,1.66,0,0,0,.34.76,1.11,1.11,0,0,0,.61.61,1.13,1.13,0,0,0,.73.24h.61a.05.05,0,0,0,.06-.06h.18a1.18,1.18,0,0,1,.31-.12l.49-.24.42-.31a10.59,10.59,0,0,0,1.41-1.4,15.81,15.81,0,0,0,1.89-2.93l.77-1.37a53.62,53.62,0,0,0,1.09,10.31q1.13,4.91,3.93,5,5.31.42,9.73-4.27a43.52,43.52,0,0,0,4.74-6,6.47,6.47,0,0,0,3.65.92,10.42,10.42,0,0,0,7.44-3.47c0,.57-.06,1.42-.06,2.56A14,14,0,0,0,243,72.16a4.07,4.07,0,0,0,4,2.26,12.67,12.67,0,0,0,9.67-4.55,37,37,0,0,0,6.47-9.82c.67-1.5,1.18-2.71,1.57-3.67.72.06,1.51.09,2.36.1-.2,1.79-.45,3.64-.73,5.56-.41,2.6-.72,4.84-.95,6.71a45.51,45.51,0,0,0-.33,5.3,14.36,14.36,0,0,0,1.1,6.19,4,4,0,0,0,3.72,2.41q5.24.25,9.79-6.1a39.84,39.84,0,0,0,6.28-12.81c1.16-4.31,1.76-6.56,1.8-6.77C288,56.28,287.64,55.94,286.7,55.94ZM180.44,62.4a11.36,11.36,0,0,1-2.28,4.3,4.15,4.15,0,0,1-3,1.68,2.07,2.07,0,0,1-1.89-1.22,6.51,6.51,0,0,1-.67-3.17,12.58,12.58,0,0,1,.61-3.91l.6-1.52.49.36a7.16,7.16,0,0,0,2.14,1.1,9.29,9.29,0,0,0,1.28.31,4.22,4.22,0,0,0,.76.15l.52,0a10.78,10.78,0,0,0,1.89-.06A17.06,17.06,0,0,1,180.44,62.4Zm-1-5.67a1.27,1.27,0,0,1-.43-.09,1.14,1.14,0,0,0-.37-.09,1.64,1.64,0,0,1-.67-.31,3.48,3.48,0,0,1-1-.73,2.62,2.62,0,0,1-.49-.61,4,4,0,0,1,2.07-.79,1.88,1.88,0,0,1,1.53.76,4.66,4.66,0,0,1,.85,2A6.08,6.08,0,0,1,179.47,56.73Zm62.95,2.13a17.06,17.06,0,0,1-2.9,2.44,5,5,0,0,1-2.65,1q-1.59,0-1.59-2.13a3.75,3.75,0,0,1,2.47-3.85,13.78,13.78,0,0,1,5.09-1C242.72,56.16,242.58,57.32,242.42,58.86Zm149.2.43a50,50,0,0,1-3.44,4.42,35.13,35.13,0,0,1-4.67,4.55c-1.3,1.06-2.24,1.58-2.81,1.58-.73,0-1.09-.81-1.09-2.44,0-1,.14-2.76.42-5.24.25-1.91.41-3.58.49-5l.06-1q0-4-2.19-5.46a8.8,8.8,0,0,0-5.07-1.5,8.32,8.32,0,0,0-2.38.25l-.3.06a6.36,6.36,0,0,0-2.14,1.22,8.85,8.85,0,0,0-1.95,2.5,16.35,16.35,0,0,0-1.4,3.36c0-.13-.18.67-.67,2.37v-.18q0-.68-.12-2.13c-.09-1-.17-1.73-.25-2.26a11.37,11.37,0,0,0-.24-1.16L363.44,52l-.37-.67a4.67,4.67,0,0,0-.67-.67,2.93,2.93,0,0,0-1-.37h-.18l-.13-.06H361a.24.24,0,0,1-.18.06,1.09,1.09,0,0,0-.55.13,2.88,2.88,0,0,0-.79.54l-.49.49a6.18,6.18,0,0,0-.67,1c-.33.61-.63,1.26-.92,1.95l-.49,1.34a11.94,11.94,0,0,0,.13-1.58l.06-1.16q0-4.34-2-5.92a7.2,7.2,0,0,0-4.66-1.58,10.48,10.48,0,0,0-1.44.09,6.27,6.27,0,0,0-.82.15,11.14,11.14,0,0,1,.18,2.13A38.84,38.84,0,0,1,348.1,52c-.18,1.65-.32,2.76-.4,3.33v.09l-.17.09-.49.12-.49.18a13.46,13.46,0,0,1-2,.55l-2.07.43h-.19a11.52,11.52,0,0,0-1.83-5.58A7.55,7.55,0,0,0,336.36,48a7.13,7.13,0,0,0-2.2-.3A9.36,9.36,0,0,0,328,50.17a13.8,13.8,0,0,0-4.18,6.5,16.13,16.13,0,0,0-.67,3.39A47.81,47.81,0,0,1,317,65.57q-3.36,2.5-5.43,2.5c-1.59,0-2.38-1.17-2.38-3.53a14,14,0,0,1,.24-2.57q.74-4.57,2.11-5.79a3.43,3.43,0,0,1,2.53-1.1q1.77.06,1.77,2a5.33,5.33,0,0,1-.09,1,2.27,2.27,0,0,1-.16.61s.16.15.46.34a2.07,2.07,0,0,0,1.07.27,10.92,10.92,0,0,0,1-3.9,3.44,3.44,0,0,0-.77-2.38,4.55,4.55,0,0,0-2.1-1.28,9,9,0,0,0-2.56-.31,14,14,0,0,0-5,1A11.48,11.48,0,0,0,303,55.81a13.19,13.19,0,0,0-2.75,6.47A14.52,14.52,0,0,0,300,65a7.78,7.78,0,0,0,1.92,5.68,6.91,6.91,0,0,0,5.16,2,16.32,16.32,0,0,0,7.2-2A29.7,29.7,0,0,0,322,64.87c.44-.44.86-.92,1.29-1.4a10.9,10.9,0,0,0,1.42,4A7.71,7.71,0,0,0,329,71a6.89,6.89,0,0,0,2.25.37,9.22,9.22,0,0,0,6.13-2.53,14.18,14.18,0,0,0,4.18-6.5,13.36,13.36,0,0,0,.55-2.2l1-.24c.89-.28,1.64-.55,2.25-.79l1.94-.83a58.5,58.5,0,0,0-.47,6.26,12.53,12.53,0,0,0,1,5.49,3.5,3.5,0,0,0,3.42,2q4.39,0,5.61-4.88l.31-1.71,1.16-5c.24-1.06.55-2.16.91-3.3l.55-1.7.73-1.65.43-.73.18-.19.19.25a3.55,3.55,0,0,1,.33.88c.1.39.17.66.21.83l.31,2,.18,2.13.31,2.2a10.82,10.82,0,0,0,.24,1.16,1,1,0,0,0,.12.37l.31.48.3.25a1.32,1.32,0,0,0,.67.18h.13l.24-.06.31-.12.3-.31.24-.42a.82.82,0,0,1,.13-.37l.12-.55.18-1,.73-3.72a17.8,17.8,0,0,1,1.1-3.17,9.8,9.8,0,0,1,1.53-2.26,4.33,4.33,0,0,1,1.7-1.09.06.06,0,0,1,.07-.07,1.82,1.82,0,0,1,.54-.06q1.83,0,1.83,3.3a29.08,29.08,0,0,1-.39,4.21c-.27,1.7-.44,2.82-.52,3.35a57,57,0,0,0-1.1,9,8.55,8.55,0,0,0,.79,4,2.82,2.82,0,0,0,2.69,1.44q4.75,0,9.09-4.12a45,45,0,0,0,7.35-9q3-4.91,3-5.4l-1.16-.24C393,57.22,392.48,58,391.62,59.29ZM339.53,62.4a11.23,11.23,0,0,1-2.29,4.3,4.13,4.13,0,0,1-3,1.68,2.09,2.09,0,0,1-1.89-1.22,6.51,6.51,0,0,1-.67-3.17,12.58,12.58,0,0,1,.61-3.91c.33-.81.53-1.32.61-1.52l.49.36a7,7,0,0,0,2.13,1.1,9.65,9.65,0,0,0,1.28.31,4.32,4.32,0,0,0,.77.15l.52,0a10.81,10.81,0,0,0,1.89-.06A19.48,19.48,0,0,1,339.53,62.4Zm-1-5.67a1.22,1.22,0,0,1-.42-.09,1.26,1.26,0,0,0-.37-.09,1.58,1.58,0,0,1-.67-.31,3.52,3.52,0,0,1-1-.73,2.92,2.92,0,0,1-.49-.61,4.05,4.05,0,0,1,2.08-.79,1.85,1.85,0,0,1,1.52.76,4.67,4.67,0,0,1,.86,2A6.16,6.16,0,0,1,338.55,56.73Zm102.51-.34a36,36,0,0,1-2.38,5.13,31.35,31.35,0,0,1-4.05,5.7c-.9,1-1.63,1.53-2.2,1.53q-1.77,0-1.77-6.29c0-1.58.1-3.76.31-6.52l.06-1.1c0-2.65-.73-4.46-2.17-5.43a8.73,8.73,0,0,0-5-1.47,10.67,10.67,0,0,0-1.56.1,6.53,6.53,0,0,0-.88.15,10,10,0,0,1,.18,2.13q0,1.29-.06,2a13.57,13.57,0,0,0-2.62-.24,13.36,13.36,0,0,0-7.2,2,9.42,9.42,0,0,0-3.36,3.45,8.72,8.72,0,0,0-1.21,4.3,4.9,4.9,0,0,0,1.43,3.63,5.81,5.81,0,0,0,4.3,1.43,10.42,10.42,0,0,0,7.44-3.47c0,.57-.06,1.42-.06,2.56a14.13,14.13,0,0,0,1.13,6.22,4.07,4.07,0,0,0,4,2.26A12.67,12.67,0,0,0,435,69.87a37,37,0,0,0,6.47-9.82c1.56-3.51,2.35-5.54,2.35-6.07h-2A17.07,17.07,0,0,1,441.06,56.39Zm-20.28,2.47a17.06,17.06,0,0,1-2.9,2.44,5,5,0,0,1-2.65,1q-1.59,0-1.59-2.13a3.76,3.76,0,0,1,2.47-3.85,13.79,13.79,0,0,1,5.1-1C421.08,56.16,420.94,57.32,420.78,58.86ZM577.3,55.2a29.44,29.44,0,0,1-3.81,5.13,50,50,0,0,1-6.22,6.07q-3.27,2.66-5.34,2.65c-1.5,0-2.26-1.24-2.26-3.72,0-.33,0-.94.13-1.83a13.58,13.58,0,0,0,4.48-.64,6.15,6.15,0,0,0,3.45-2.65A7.44,7.44,0,0,0,569,56.42a4.3,4.3,0,0,0-.92-2.74,4.65,4.65,0,0,0-2.26-1.59,9.58,9.58,0,0,0-2.62-.3,13.48,13.48,0,0,0-7.72,2.47q-3.63,2.46-4.6,8.39c-.07.47-.13.91-.18,1.34l-.34.55a21.9,21.9,0,0,1-3.93,4.82,3.09,3.09,0,0,1-1.84.85c-1,0-1.6-1-1.89-2.9a67.16,67.16,0,0,1-.42-8.81V52.76q.12-5.79.36-10.61l2-.24,1.95-.25,1.58-.24,1.28-.19a4.33,4.33,0,0,0,.71-.15,1.65,1.65,0,0,1,.33-.09l-.12-1.89H548l-1.65.06q-1.21,0-1.89.06l-1.71.06.31-5.37.06-1.09q0-4-2.16-5.43a8.79,8.79,0,0,0-5-1.47,12.1,12.1,0,0,0-1.55.09,7.71,7.71,0,0,0-.89.16,16.58,16.58,0,0,1,.19,2.93c0,2.56-.17,6.22-.49,11l-.25.06q-1.46.12-2.13.24l-1.89.24-2.87.43-.79.12-.31.06.19,1.9h4c.41,0,1.06-.07,2-.07l2-.12q-.56,8.66-.55,15c-.65,1.22-1.28,2.37-1.89,3.41A15.91,15.91,0,0,1,528.75,64a12.71,12.71,0,0,1-1.1,1l-.31.25a.2.2,0,0,1-.15.06.2.2,0,0,0-.15.06q-.12,0-.12.06h-.19l-.18.06h-.06l-.12-.06-.06-.06-.19-.61q-.06-.56-.06-2c.08-1.06.16-1.83.25-2.32v-.37a10,10,0,0,0,.12-1.34q.3-2.74.3-3.72,0-3.9-2.07-3.9a4,4,0,0,0-2.87,1.64,22.4,22.4,0,0,0-2.68,3.79V56.3l.06-1.22q0-4.76-2-6.53a7,7,0,0,0-4.7-1.76,9.59,9.59,0,0,0-1.4.09,6.46,6.46,0,0,0-.8.15,11.63,11.63,0,0,1,.19,2.26,72.4,72.4,0,0,1-.74,7.56c-.09.66-.17,1.33-.26,2-.37.45-.78.94-1.23,1.46A50,50,0,0,1,502,66.4q-3.27,2.66-5.34,2.65-2.25,0-2.25-3.72,0-.49.12-1.83a13.54,13.54,0,0,0,4.48-.64,6.15,6.15,0,0,0,3.45-2.65,7.44,7.44,0,0,0,1.22-3.79,4.3,4.3,0,0,0-.92-2.74,4.65,4.65,0,0,0-2.26-1.59,9.58,9.58,0,0,0-2.62-.3,13.42,13.42,0,0,0-7.71,2.47,9.05,9.05,0,0,0-1.59,1.38c-2.13,1.1-4.41,2.35-6.86,3.77l-.19-3.23q-.36-4.76-2.53-6.5a7.62,7.62,0,0,0-4.91-1.74,8.15,8.15,0,0,0-1.55.13,8.35,8.35,0,0,0-.89.18,11.63,11.63,0,0,1,.31,2.1c.08,1,.14,1.66.18,2a12.81,12.81,0,0,0-2.62-.25,14.57,14.57,0,0,0-7.81,2.14,10,10,0,0,0-3.42,3.6A9,9,0,0,0,457,62.28a5,5,0,0,0,1.41,3.63,5.55,5.55,0,0,0,4.14,1.43,11.35,11.35,0,0,0,5.49-1.55,21.36,21.36,0,0,0,4.76-3.51c0,.65,0,1.59.12,2.81q-13.05,9.33-13.05,15.73a5.91,5.91,0,0,0,.61,2.69q4.26,9.39,8.81,12.66c3,2.17,5.65,3.26,7.84,3.26l.73-.06q5.19-.06,5.19-16.47,0-5.31-.46-11.53c-.3-4.15-.48-6.59-.52-7.32l-.18-2.38c1.63-1,3.2-2,4.71-2.84a17.24,17.24,0,0,0-1.05,3.82,23.94,23.94,0,0,0-.31,3.41c0,2.56.58,4.5,1.74,5.8a6,6,0,0,0,4.73,2,15,15,0,0,0,7.08-2.14,32.43,32.43,0,0,0,7.74-6.13,37.93,37.93,0,0,0,2.52-2.93c-.09,1.1-.14,2.09-.14,3a11.15,11.15,0,0,0,1,5.19,3.52,3.52,0,0,0,3.38,1.89q4.22,0,5.49-4.88l.55-2q.67-2.62,1.47-4.94c.16-.53.55-1.59,1.16-3.18a17.54,17.54,0,0,1,.79-1.64,8,8,0,0,1,.85-1.47l.37-.36c.2-.21.36-.27.49-.19a.58.58,0,0,1,.3.37,18.17,18.17,0,0,1,.06,1.83q0,.68-.12,2.13c-.16,2-.26,3.44-.3,4.46a18.22,18.22,0,0,0,.12,2.38,2.88,2.88,0,0,1,.15.58,1.66,1.66,0,0,0,.34.76,1.11,1.11,0,0,0,.61.61,1.13,1.13,0,0,0,.73.24H527a.05.05,0,0,0,.06-.06h.18a1.07,1.07,0,0,1,.31-.12l.48-.24.43-.31a10.06,10.06,0,0,0,1.4-1.4,15.32,15.32,0,0,0,1.9-2.93l.77-1.37a54.53,54.53,0,0,0,1.08,10.31q1.14,4.91,3.94,5,5.31.42,9.73-4.27a45.27,45.27,0,0,0,3.38-4.09,7.28,7.28,0,0,0,1.62,4,6,6,0,0,0,4.73,2,15,15,0,0,0,7.08-2.14,32.43,32.43,0,0,0,7.74-6.13,41.72,41.72,0,0,0,6.71-9.36Zm-12.62.25a1.81,1.81,0,0,1,1.4.61,2.13,2.13,0,0,1,.43,1.34,3.71,3.71,0,0,1-.37,1.65c-1.06,2.15-3.09,3.13-6.1,2.92C560.81,57.42,562.36,55.24,564.68,55.45Zm-92,3.35a14.12,14.12,0,0,1-3.48,2.69,7.62,7.62,0,0,1-3.54,1.16c-1.3,0-1.95-.74-1.95-2.2a4,4,0,0,1,3-3.94,17.12,17.12,0,0,1,5.7-1.06l.25,3.29Zm.42,26.72c-.12,2.07-.77,3.11-1.95,3.11-1,0-2.11-.66-3.41-2a20.57,20.57,0,0,1-3.48-4.85,4.38,4.38,0,0,1-.49-2q0-4.64,9.27-12c.13,3.46.19,7,.19,10.61Q473.18,81.25,473.05,85.52Zm26.36-30.07a1.81,1.81,0,0,1,1.4.61,2.13,2.13,0,0,1,.43,1.34,3.58,3.58,0,0,1-.37,1.65c-1.06,2.15-3.09,3.13-6.1,2.92C495.54,57.42,497.09,55.24,499.41,55.45Z"></path></clipPath>
+                    </defs><title>Pode Contar Com A Gente</title><g class="cls-2">
+                    <path class="cls-3" d="M32.68,29.23S30.5,48.59,31.32,55.55s.54,14.31,1.77,19.22L36.36,58.2s10.84-6.54,12.07-16-5.32-5.73-5.32-5.73-7.36,8.39-7.56,13.71,15.34,5.93,15.34,5.93-4.11,13.15,5.31,13.7c7,.41,9.21-10,8.6-15.34s-11.87-4.91-9.62-1.43c0,0,2.82,13.07,19,2.86,5.53-3.47,9.62-3.06,9.62-3.06s-13.3-.41-10,8,13.09-5.93,13.09-5.93S93,35.3,90.16,30.18c0,0-4,32.87-.61,36,2.65,2.46,4.9,0,10.22-3.68,0,0,9.41,2.45,13.71-1s3.34-8.2-1.23-8c-8.59.41-13.09,16.16-7,18,0,0,10.84,2,22.09-17.59V25.27h32.52l-2,32.73s2-5.32-4.7-5.11-9.94,13.16-5.93,16.36,16-4.91,21.27-12.07c0,0-3.48,13.5,5.11,12.68S183.84,56.36,181,53.5s-8.18-4.7-7.78.41,12.48,7,16.57,2.45S192,49,192,49s-1.84,22.09.82,20.25,7.77-18.61,10.64-16.77-1.64,13.29,1.63,13.29,9.41-11,9.41-11,5.73-25.37,1-26.8-13.3,14.52-13.3,14.52l30.27-3.06-16,8.59s-3.14,23.93,3,24.75,11.73-6.34,13.57-14.93,15.34-3.28,15.34-3.28-5.53,9.62-10.64,9.82-6.34-7.16-2-9,11-.82,11.45-4.91c0,0-2.59,22,3.34,21.14s10.57-6,13.64-16.84-6.14-5.73-4.3-4.5,10.64,3.27,12.48,6.13-7.58,21.42-.55,23c0,0,10,2.8,15.07-24s29.46,2.86,29.46,2.86,3.06-5.93-2.87-5.72-14.32,14.93-6.34,17,20.46-10.63,20.87-12.68c0,0-4.1,13.3,4.29,12.89s10-11.86,8.18-16-9.61-7.56-9.82-.4,16.78,5.52,19.44,2.86,1.43-8.59,1.43-8.59-3.68,21.88,0,21.27,5.73-17.39,9.61-17.39,1,11.66,3.07,10.85,1-13.5,8.8-12.48-1.23,17.38,3.06,21.68,12.69-4.3,19-16.16,28.84-9.41,30.27-5.52.72,9.6-10,15.13c-6.75,3.48-8-10.43-1.84-10,0,0,12.68-3.88,13.7.82S423,69,427.25,71.09c3.68,1.84,12.68-3.68,16.77-22.29,0,0,26.8-8,32.12,2s-8.39,13.91-11.46,14.93S456.91,59,463.25,56s14.73-3.06,15.34,1.23,1.64,40.71-2.25,38.46-17.18-11-14.73-17.19S490.45,53.3,492.5,53.91s6.34-2.86,10,1.43-6.13,9.41-8,8-2.46-7.77-2.46-7.77-8.39,16,.21,15.54,22.09-11.25,21.47-20c0,0-3.47,17.59.41,17.59s6.55-17.39,10.43-16-1.84,11.46,1.64,13.5,11.45-15.13,11.66-22.29,2.86-17-2.66-17l-9.41,15.14,22.91-2s-11.66,12.68-11.66,13.5S533.61,74.36,540.36,74s10.84-12.06,16.57-12.27,6.75,3.07,10.23-3.07-5.52-6.34-7.57-4.29S549,71.3,558.16,71.7s20-15.75,21.07-18" transform="translate(-25.13 -19.27)"></path></g></svg>
+            </div>
+            <div class="button flex hor center">VER MAIS</div>
+        </div>
+    </div>
+
+    <div class="section--strech flex ver center surface--bg">
+        <span class="page-title flex ver center showup">
+            <div class="t1 text-dark">VOCÊ VAI ENCONTRAR NA MARKO</div>
+            <div class="t2 text-dark-sub">Produtos de qualidade imcomparável</div>
+        </span>
+    </div>
+    <div id="start" class="section--strech infinity flex ver center surface--bg">
+        <div class="category-grid">
+            <div class="category showup" onclick="window.location.href='produtos?tags=INFORMATICA'">
+                <img src="images/category_01.jpg"><div></div>
+                <span class="text-light no-select">
+                    <span class="subtitle">Tudo em</span><br>
+                    <span class="title">INFORMÁTICA</span>
+                </span>
+            </div>
+            <div class="category showup" onclick="window.location.href='produtos?tags=IMPRESSAO'">
+                <img src="images/category_02.jpg"><div></div>
+                <span class="text-light no-select">
+                    <span class="subtitle">Soluções em</span><br>
+                    <span class="title">IMPRESSORAS</span>
+                </span>
+            </div>
+            <div class="category showup" onclick="window.location.href='produtos?tags=PAPELARIA'">
+                <img src="images/category_03.jpg"><div></div>
+                <span class="text-light no-select">
+                    <span class="subtitle">Suprimentos e</span><br>
+                    <span class="title">PAPELARIA</span>
+                </span>
+            </div>
+            <div class="category showup" onclick="window.location.href='produtos?tags=MOVEIS'">
+                <img src="images/category_04.jpg"><div></div>
+                <span class="text-light no-select">
+                    <span class="subtitle">O melhor em</span><br>
+                    <span class="title">MÓVEIS</span>
+                </span>
+            </div>
+            <div class="category showup" onclick="window.location.href='produtos?tags=ACESSORIOS'">
+                <img src="images/category_05.jpg"><div></div>
+                <span class="text-light no-select">
+                    <span class="subtitle">Tecnologia</span><br>
+                    <span class="title">ACESSÓRIOS</span>
+                </span>
+            </div>
+            <div class="category showup" onclick="window.location.href='produtos'">
+                <img src="images/category_06.jpg"><div></div>
+                <span class="text-light no-select">
+                    <span class="subtitle">Promoções e</span><br>
+                    <span class="title">OFERTAS</span>
+                </span>
+            </div>
+        </div>
+        <div class="carrosel">
+            <div class="items">
+                <div class="parceiro" onclick="window.location.href='produtos?tags=KYOCERA'"><img src="images/par_01.png"/></div>
+                <div class="parceiro" onclick="window.location.href='produtos?tags=JBL'"><img src="images/par_02.png"/></div>
+                <div class="parceiro" onclick="window.location.href='produtos?tags=BEMATECH'"><img src="images/par_03.png"/></div>
+                <div class="parceiro" onclick="window.location.href='produtos?tags=INTELBRAS'"><img src="images/par_04.png"/></div>
+                <div class="parceiro" onclick="window.location.href='produtos?tags=SAMSUNG'"><img src="images/par_05.png"/></div>
+                <div class="parceiro" onclick="window.location.href='produtos?tags=EPSON'"><img src="images/par_06.png"/></div>
+                <div class="parceiro" onclick="window.location.href='produtos?tags=HP'"><img src="images/par_07.png"/></div>
+                <div class="parceiro" onclick="window.location.href='produtos?tags=MAXPRINT'"><img src="images/par_08.png"/></div>
+                <div class="parceiro" onclick="window.location.href='produtos?tags=CASIO'"><img src="images/par_09.png"/></div>
+                <div class="parceiro" onclick="window.location.href='produtos?tags=APC'"><img src="images/par_10.png"/></div>
+                <div class="parceiro" onclick="window.location.href='produtos?tags=CAVALETTI'"><img src="images/par_11.png"/></div>
+                <div class="parceiro" onclick="window.location.href='produtos?tags=MULTILASER'"><img src="images/par_12.png"/></div>
+                <div class="parceiro" onclick="window.location.href='produtos'"><img src="images/par_12.png"/></div>
+                <div class="parceiro" onclick="window.location.href='produtos'"><img src="images/par_12.png"/></div>
+                <div class="parceiro" onclick="window.location.href='produtos'"><img src="images/par_12.png"/></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Social -->
+    <div id="social" class="section--strech flex ver center parallax">
+        <div id="social-bg" class="parallax-bg"></div>
+        <div id="social-content" class="section flex ver center parallax-content">
+            <div class="title text-light">VENHA SEGUIR A MARKO</div>
+            <div class="subtitle text-light">Nós amamos o nosso trabalho e queremos mostrar isso pra você</div>
+            <hr style="border-color : white">
+            <div id="social_icons">
+                <img src="images/whats-white.svg"/>
+                <img src="images/insta-white.svg"/>
+                <img src="images/face-white.svg"/>
+                <img src="images/tube-white.svg"/>
+            </div>
+        </div>
+    </div>
+
+    <div class="section--strech flex ver center surface--bg">
+        <span class="page-title flex ver center showup">
+            <div class="t1 text-dark">VOCÊ VAI ENCONTRAR NA MARKO</div>
+            <div class="t2 text-dark-sub">Produtos de qualidade imcomparável</div>
+        </span>
+    </div>
+    <div class="product-grid showup surface--bg">
+        <div class="product hint--bg">
+            <div class="image" style="background-image: url('images/produtos/p_1.jpg')">
+                <div class="black-filter"></div>
+            </div>
+            <div class="info surface--bg">
+                <div class="title text-primary">SOLUÇÕES</div>
+                <div class="subtitle text-dark-sub">SOFTWARES DE GESTÃO</div>
+            </div>
+        </div>
+        <div class="product hint--bg">
+            <div class="image" style="background-image: url('images/produtos/p_2.jpg')">
+                <div class="black-filter"></div>
+            </div>
+            <div class="info surface--bg">
+                <div class="title text-primary">LOCAÇÃO</div>
+                <div class="subtitle text-dark-sub">EVENTOS, ESPAÇOS, PRODUTOS</div>
+            </div>
+        </div>
+        <div class="product hint--bg">
+            <div class="image" style="background-image: url('images/produtos/p_3.jpg')">
+                <div class="black-filter"></div>
+            </div>
+            <div class="info surface--bg">
+                <div class="title text-primary">AUTOMAÇÃO COMERCIAL</div>
+                <div class="subtitle text-dark-sub">SCANNERS, IMPRESSORAS</div>
+            </div>
+        </div>
+        <div class="product hint--bg">
+            <div class="image" style="background-image: url('images/produtos/p_4.jpg')">
+                <div class="black-filter"></div>
+            </div>
+            <div class="info surface--bg">
+                <div class="title text-primary">LOJA VIRTUAL</div>
+                <div class="subtitle text-dark-sub">COMPRE SEM SAIR DE CASA</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Destaque -->
+    <div class="section--strech flex ver center">
+        <span class="page-title flex ver center showup">
+            <div class="t1 text-dark">CONFIRA NOSSAS OFERTAS</div>
+            <div class="t2 text-dark-sub">Produtos em promoção com duração limitada, aproveite !</div>
+        </span>
+        <div class="section infinity pgrid showup">
+            <!--php foreach($rows as &$row) :; ?>
+                <a class="pcard surface--bg shadow--btn flex ver"
+                   href="detalhe?id=0">
+                <div class="pimg surface--bg"
+                     style="background-image: url('uploads/img_0.png')"></div>
+                <hr>
+                <div class="pcontent flex ver">
+                    <div class="name text-dark-sub">Nome do produto</div>
+                    <div class="price text-primary sell">R$ 50,00</div>
+                    <div class="price-part text-primary sell">até 10x de R$ 5,00</div>
+                </div>
+                <?php if ($row["promocao"] == 1): ?>
+                    <div class="psale flex ver center sale">Promoção</div>
+                <?php endif; ?>
+                </a>
+            <?php endforeach;? -->
+
+    </div>
+    <span class="back-link"><a class="no-link flex hor center text-primary" href="produtos">Ver Todos<i class="material-icons">arrow_right</i></a></span>
+</div>
+
+<!-- Solution -->
+<div id="solution" class="section--strech flex ver center parallax">
+    <div id="solution-bg" class="parallax-bg"></div>
+    <div id="solution-content" class="section flex ver center parallax-content">
+        <div class="title text-light">MARKO SOLUTION</div>
+        <div class="subtitle text-light">Soluções para otimizar os negócios da sua empresa, aliando conhecimento tecnológico, qualidade nos serviços prestados e o alto desempenho no atendimento na sua empresa.</div>
+        <hr style="border-color : white">
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect light--btn">CONHECER</button>
+    </div>
+</div>
+
+<!-- Informações -->
+<div id="info" class="section--strech flex ver centerH surface--bg">
+    <div class="section flex ver centerH">
+            <span class="page-title flex ver center showup">
+                <div class="t1 text-dark">SOLUÇÕES E INOVAÇÕES</div>
+                <div class="t2 text-dark-sub">A <b class="marko text-primary">MARKO</b> sempre está na liderança</div>
+            </span>
+        <div class="t3 text-dark-sub showup" style="align-self: stretch">
+            Com a experiência adquirida ao longo de 30 anos no mercado, a Marko tem como referencial ser fornecedora de soluções em informática,
+            locação e venda de impressoras, suprimentos para Impressão, papelaria e móveis para o Segmento Corporativo, com prioridade em atender
+            requerimentos e necessidades de nossos clientes com Projetos e Soluções Personalizadas
+        </div>
+        <div class="four-pass showup">
+            <div class="sec flex center">
+                <div class="flex hor center">
+                    <div class="image surface--bg shadow--small flex center"><img src="images/missao.svg"/></div>
+                    <div class="content flex ver">
+                        <div class="title">Missão</div>
+                        <div class="subtitle">Fornecer produtos e serviços de tecnologia e mobiliário, procurando inovações com responsabilidade, satisfação e reconhecimento</div>
+                    </div>
+                </div>
+            </div>
+            <div class="sec flex center">
+                <div class="flex hor center">
+                    <div class="image surface--bg shadow--small flex center"><img src="images/visao.svg"/></div>
+                    <div class="content flex ver">
+                        <div class="title">Visão</div>
+                        <div class="subtitle">Crescer comercializando equipamentos, móveis, suprimentos e serviços na área de tecnologia com referência confiável e sustentável</div>
+                    </div>
+                </div>
+            </div>
+            <div class="sec flex center">
+                <div class="flex hor center">
+                    <div class="image surface--bg shadow--small flex center"><img src="images/valores.svg"/></div>
+                    <div class="content flex ver">
+                        <div class="title">Valores</div>
+                        <div class="subtitle">Integridade, honestidade, responsábilidade, compromissos, resultados e entregar qualidade a seus clientes</div>
+                    </div>
+                </div>
+            </div>
+            <div class="sec flex center">
+                <div class="flex hor center">
+                    <div class="image surface--bg shadow--small flex center"><img src="images/responsabilidade.svg"/></div>
+                    <div class="content flex ver">
+                        <div class="title">Responsabilidade</div>
+                        <div class="subtitle">Cumprir todos os critérios necessários em uma empresa, no objetivo de honrar com todos os compromissos</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="video flex center shadow--medium">
+        <div>
+            <div id="main-video"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Filiais -->
+<div id="filial" class="section--strech flex ver center background--bg">
+        <span class="page-title flex ver center showup">
+            <div class="t1 text-dark">NOSSAS FILIAIS</div>
+            <div class="t2 text-dark-sub">Encontre uma <b class="marko">MARKO</b> próxima de você</div>
+        </span>
+    <div class="filiais showup">
+        <div class="filial flex ver surface--bg shadow--medium">
+            <img src="images/filial_01.jpg">
+            <div class="text flex ver center">
+                <div class="title text-dark">MARKO INFORMÁTICA</div>
+                <hr>
+                <div class="subtitle text-dark-sub">86 2106-5000</div>
+            </div>
+            <div class="text-over flex ver center" style="background-color: rgba(63,81,181,0.75)">
+                <div class="title text-light">Rua Dr. Area Leão, 278<br>Centro Norte - Teresina PI</div>
+                <hr>
+                <div class="subtitle text-light-sub"><img src="images/whats-white.svg"><img src="images/face-white.svg"><img src="images/insta-white.svg"></div>
+            </div>
+        </div>
+        <div class="filial flex ver surface--bg shadow--medium">
+            <img src="images/filial_02.jpg">
+            <div class="text flex ver center">
+                <div class="title text-dark">MARKO SOLUTION</div>
+                <hr>
+                <div class="subtitle text-dark-sub">86 2106-5010</div>
+            </div>
+            <div class="text-over flex ver center" style="background-color: rgba(92,166,79,0.75)">
+                <div class="title text-light">Rua Eliseu Martins, 1805<br>Centro Norte - Teresina PI</div>
+                <hr>
+                <div class="subtitle text-light-sub"><img src="images/whats-white.svg"><img src="images/face-white.svg"><img src="images/insta-white.svg"></div>
+            </div>
+        </div>
+        <div class="filial flex ver surface--bg shadow--medium">
+            <img src="images/filial_03.jpg">
+            <div class="text flex ver center">
+                <div class="title text-dark">MARKO FLORIANO</div>
+                <hr>
+                <div class="subtitle text-dark-sub">89 3521-2940</div>
+            </div>
+            <div class="text-over flex ver center"  style="background-color: rgba(92,166,79,0.75)">
+                <div class="title text-light">Rua São João, 480, <br>Sala 01 - Centro Floriano PI</div>
+                <hr>
+                <div class="subtitle text-light-sub"><img src="images/whats-white.svg"><img src="images/face-white.svg"><img src="images/insta-white.svg"></div>
+            </div>
+        </div>
+        <div class="filial flex ver surface--bg shadow--medium">
+            <img src="images/filial_04.jpg">
+            <div class="text flex ver center">
+                <div class="title text-dark">MARKO CEASA</div>
+                <hr>
+                <div class="subtitle text-dark-sub">89 2106-5000</div>
+            </div>
+            <div class="text-over flex ver center"  style="background-color: rgba(92,166,79,0.75)">
+                <div class="title text-light">Nova CEASA<br>Parque São João - Teresina PI</div>
+                <hr>
+                <div class="subtitle text-light-sub"><img src="images/whats-white.svg"><img src="images/face-white.svg"><img src="images/insta-white.svg"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- Footer -->
+<div id="footer">
+    <div id="rodape" class="flex ver center footer--bg">
+        <div class="section">
+            <div class="group">
+                <div class="title text-light">MARKO INFORMÁTICA</div>
+                <div class="subtitle s space text-light-sub">Pode contar com a gente</div>
+                <div class="subtitle s text-light">Rua Dr. Area Leão, 278 N, Praça Fripisa</div>
+                <div class="subtitle s space text-light-sub">Expediente: 8h às 18h</div>
+                <div class="subtitle g text-light">86.2106-5000</div>
+                <div class="subtitle m text-light-sub">marketing@grupomarko.com.br</div>
+            </div>
+            <div class="group">
+                <div class="title space text-light">Novos Produtos</div>
+                <a href="detalhe" class="no-link">
+                    <div class="subtitle m text-light">Impressora exemplo</div>
+                    <div class="subtitle s text-light-sub space">Descrição simples da impressora exemplo</div>
+                </a>
+                <a href="detalhe" class="no-link">
+                    <div class="subtitle m text-light">Impressora exemplo</div>
+                    <div class="subtitle s text-light-sub space">Descrição simples da impressora exemplo</div>
+                </a>
+                <a href="detalhe" class="no-link">
+                    <div class="subtitle m text-light">Impressora exemplo</div>
+                    <div class="subtitle s text-light-sub space">Descrição simples da impressora exemplo</div>
+                </a>
+            </div>
+            <div class="group large-only">
+                <div class="title space text-light">Informações</div>
+                <div class="subtitle m space text-light">- Termos de Uso</div>
+                <div class="subtitle m space text-light">- Política de Privacidade</div>
+                <div class="subtitle m space text-light">- Contatos</div>
+                <div class="subtitle m text-light">- Sobre</div>
+            </div>
+        </div>
+    </div>
+    <div id="rodape_rodape" class="section--strech flex ver center">
+        <div class="section flex hor">
+            <a href="" class="no-link text-light">© Marko Informática</a>
+            <a href="" class="no-link large-only text-light">Sobre</a>
+            <a href="" class="no-link large-only text-light">Termos de Uso</a>
+            <a href="" class="no-link large-only text-light">Política de Privacidade</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

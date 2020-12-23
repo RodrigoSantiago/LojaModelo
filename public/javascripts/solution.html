@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE-EmulateIE7" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Jquery UI -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <!-- Material Design Lite -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-red.min.css" />
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+
+    <!-- Plugins -->
+    <link rel="stylesheet" href="styles/slick.css">
+    <link rel="stylesheet" href="styles/slick-theme.css">
+    <script src="scripts/slick.min.js"></script>
+    <script src="scripts/jquery.elevatezoom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+    <!-- Youtube API -->
+    <script type="text/javascript" src="http://www.youtube.com/player_api"></script>
+
+    <!-- Page Styles -->
+    <link rel="stylesheet" href="styles/colors.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/pcards.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <!-- Page Scripts -->
+    <script src="scripts/header.js"></script>
+    <script src="scripts/index.js"></script>
+    <title>Marko Informática</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Parisienne&display=swap" rel="stylesheet">
+</head>
+<body class="background--bg">
+
+<!-- ?php if ($type == 'HOME'): ?-->
+<!-- Home -->
+<div id="header">
+    <div class="header-top primary-dark--bg large-only"></div>
+    <div id="header-bar" class="header-row large-only">
+        <a href="index" class="flex center logo"><img id="header-logo" src="images/logo_branco.png" alt="MARKO"/></a>
+        <div class="space"></div>
+        <a class="no-link item text-light " href="index">Marko</a>
+        <a class="no-link item text-light " href="solution">Solution</a>
+        <a class="no-link item text-light " href="produtos">Produtos</a>
+        <a class="no-link item text-light " href="info">Informações</a>
+        <a class="no-link item text-light " href="login">Entrar</a>
+        <a class="no-link item text-light sell" href="carrinho"><i class="material-icons">shopping_cart</i></a>
+    </div>
+    <div id="header-bar-home" class="header-row small-only">
+        <div id="debug"></div>
+        <button class="small-only mdl-button mdl-js-button mdl-button--icon sell" onclick="window.location.href='carrinho'"><i class="material-icons mdl-badge mdl-badge--overlap text-light"  data-badge="1">shopping_cart</i></button>
+    </div>
+</div>
+<button id="hamburger" class="small-only mdl-button mdl-js-button mdl-button--icon"><i class="material-icons text-light">dehaze</i></button>
+<!-- ?php elseif ($type == 'SEARCH'): ?-->
+<!-- Search -->
+<div id="header">
+    <div class="header-top primary-dark--bg large-only"></div>
+    <div id="header-bar" class="header-row large-only">
+        <a href="index" class="flex center logo"><img src="images/logo_branco.png" alt="MARKO"/></a>
+        <div class="space"></div>
+        <a class="no-link item text-light " href="index">Marko</a>
+        <a class="no-link item text-light " href="solution">Solution</a>
+        <a class="no-link item text-light " href="produtos">Produtos</a>
+        <a class="no-link item text-light " href="info">Informações</a>
+        <a class="no-link item text-light " href="login">Entrar</a>
+        <a class="no-link item text-light sell" href="carrinho"><i class="material-icons">shopping_cart</i></a>
+    </div>
+    <div class="flex ver primary--bg shadow--medium">
+        <div class="header-row small-only">
+            <button class="small-only mdl-button mdl-js-button mdl-button--icon sell" onclick="window.location.href='carrinho'"><i class="material-icons mdl-badge mdl-badge--overlap text-light"  data-badge="1">shopping_cart</i></button>
+        </div>
+        <div class="header-row filters small-only">
+            <button class="small-only mdl-button mdl-js-button mdl-button--icon btn-filter"><i class="material-icons text-light">filter_list</i></button>
+        </div>
+    </div>
+</div>
+<button id="hamburger" class="small-only mdl-button mdl-js-button mdl-button--icon"><i class="material-icons text-dark">dehaze</i></button>
+<!--?php else :?-->
+<!-- Default -->
+<div id="header">
+    <div class="header-top primary-dark--bg large-only"></div>
+    <div id="header-bar" class="shadow header-row large-only">
+        <a href="index" class="flex center logo"><img src="images/logo_branco.png" alt="MARKO"/></a>
+        <div class="space"></div>
+        <a class="no-link item text-light " href="index">Marko</a>
+        <a class="no-link item text-light " href="solution">Solution</a>
+        <a class="no-link item text-light " href="produtos">Produtos</a>
+        <a class="no-link item text-light " href="info">Informações</a>
+        <a class="no-link item text-light " href="login">Entrar</a>
+        <a class="no-link item text-light sell" href="carrinho"><i class="material-icons">shopping_cart</i></a>
+    </div>
+    <div class="flex ver primary--bg shadow--medium">
+        <div class="header-row small-only">
+            <button class="small-only mdl-button mdl-js-button mdl-button--icon sell" onclick="window.location.href='carrinho'"><i class="material-icons mdl-badge mdl-badge--overlap text-light"  data-badge="1">shopping_cart</i></button>
+        </div>
+    </div>
+</div>
+<button id="hamburger" class="small-only mdl-button mdl-js-button mdl-button--icon"><i class="material-icons text-light">dehaze</i></button>
+<!--?php endif ?-->
+
+<!-- Drawer -->
+<div id="drawer" class="shadow--mediumr surface--bg small-only" style="left : -256px">
+    <div class="header surface--bg"></div>
+    <hr>
+    <div class="nav flex ver surface--bg">
+        <a href="index" class="no-link flex hor"><i class="material-icons text-dark-sub">home</i><span class="text-dark">Marko</span></a>
+        <a href="solution" class="no-link flex hor"><i class="material-icons text-dark-sub">assessment</i><span class="text-dark">Solution</span></a>
+        <a href="produtos" class="no-link flex hor"><i class="material-icons text-dark-sub">dashboard</i><span class="text-dark">Produtos</span></a>
+        <a href="info" class="no-link flex hor"><i class="material-icons text-dark-sub">info</i><span class="text-dark">Informações</span></a>
+        <a href="login" class="no-link flex hor"><i class="material-icons text-dark-sub">account_circle</i><span class="text-dark">Entrar</span></a>
+        <a href="carrinho" class="no-link flex hor sell"><i class="material-icons text-dark-sub">shopping_cart</i><span class="text-dark">Carrinho</span></a>
+    </div>
+</div>
+<div id="drawer-block" class="small-only" style="opacity : 0; display : none;"></div>
+<div id="whatss" class="surface--bg shadow--medium flex hor center text-light" style="background-color: #0DC143" onclick="window.open('https://wa.me/5586981782694')">
+    <img src="images/whats-ico.svg">
+    <span class="text">Atendimento<br>Whatsapp</span>
+</div>
+
+<!-- Conteúdo -->
+
+<div class="page-content flex ver center">
+    <!-- Inicio -->
+    <div class="banners">
+        <div class="banners-container">
+            <div class="banner no-select" style="z-index:2; background: url('images/solution_header_bg.jpg') center center; background-size: cover; ">
+            </div>
+        </div>
+        <div class="banners-title flex ver center" style="background: url('images/solution_header_gradient.png') center center; background-size: 100% 100%; ">
+            <div style="background : url('images/pattern.png') repeat; position : absolute; left : 0; right : 0; bottom : 0; top : 0; z-index : -1"></div>
+            <div class="box flex">
+                <div id="solution-text" class="text no-select">
+                    soluções inteligentes
+                </div>
+            </div>
+            <div class="button flex hor center">VER MAIS</div>
+        </div>
+    </div>
+
+    <!-- Inicio -->
+    <div id="start" class="section infinity flex ver center">
+        <div class="categories flex hor center">
+            <div class="category flex ver center surface--bg shadow--medium" onclick="window.location.href='produtos'">
+                <span class="flex ver text-light no-select">
+                    <img src="images/solution_icons_01.png">
+                    <span class="title text-primary">AUTOMAÇÃO COMERCIAL</span><br>
+                    <span class="subtitle text-dark">Soluções eficientes e produtivas em tecnologia para o seu negócio</span>
+                </span>
+            </div>
+            <div class="category flex ver center surface--bg shadow--medium" onclick="window.location.href='produtos'">
+                <span class="flex ver text-light no-select">
+                    <img src="images/solution_icons_02.png">
+                    <span class="title text-primary">GESTÃO DE PESSOAS</span><br>
+                    <span class="subtitle text-dark">Soluções eficientes e produtivas em tecnologia para o seu negócio</span>
+                </span>
+            </div>
+            <div class="category flex ver center surface--bg shadow--medium" onclick="window.location.href='produtos'">
+                <span class="flex ver text-light no-select">
+                    <img src="images/solution_icons_03.png">
+                    <span class="title text-primary">LOCAÇÃO</span><br>
+                    <span class="subtitle text-dark">Soluções eficientes e produtivas em tecnologia para o seu negócio</span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trabalho -->
+    <div id="work" class="flex ver center surface--bg">
+        <div class="items section infinity flex ver">
+            <div class="line flex hor">
+                <div class="item flex hor">
+                    <div class="icon"><img src="images/solution_icons_03.png"></div>
+                    <div class="content flex ver">
+                        <div class="title text-dark">Titulo</div>
+                        <div class="subtitle text-dark-sub">Conteúdo explicativo de até 3 linhas de quebra</div>
+                    </div>
+                </div>
+                <div class="item flex hor">
+                    <div class="icon"><img src="images/solution_icons_03.png"></div>
+                    <div class="content flex ver">
+                        <div class="title text-dark">Titulo</div>
+                        <div class="subtitle text-dark-sub">Conteúdo explicativo de até 3 linhas de quebra</div>
+                    </div>
+                </div>
+            </div>
+            <div class="line flex hor">
+                <div class="item flex hor">
+                    <div class="icon"><img src="images/solution_icons_03.png"></div>
+                    <div class="content flex ver">
+                        <div class="title text-dark">Titulo</div>
+                        <div class="subtitle text-dark-sub">Conteúdo explicativo de até 3 linhas de quebra</div>
+                    </div>
+                </div>
+                <div class="item flex hor">
+                    <div class="icon"><img src="images/solution_icons_03.png"></div>
+                    <div class="content flex ver">
+                        <div class="title text-dark">Titulo</div>
+                        <div class="subtitle text-dark-sub">Conteúdo explicativo de até 3 linhas de quebra</div>
+                    </div>
+                </div>
+            </div>
+            <div class="line flex hor">
+                <div class="item flex hor">
+                    <div class="icon"><img src="images/solution_icons_03.png"></div>
+                    <div class="content flex ver">
+                        <div class="title text-dark">Titulo</div>
+                        <div class="subtitle text-dark-sub">Conteúdo explicativo de até 3 linhas de quebra</div>
+                    </div>
+                </div>
+                <div class="item flex hor">
+                    <div class="icon"><img src="images/solution_icons_03.png"></div>
+                    <div class="content flex ver">
+                        <div class="title text-dark">Titulo</div>
+                        <div class="subtitle text-dark-sub">Conteúdo explicativo de até 3 linhas de quebra</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bgimg flex hor">
+            <div class="icon"></div>
+        </div>
+    </div>
+
+    <!-- Blog -->
+    <div class="section--strech flex ver center">
+        <span class="page-title flex ver center showup">
+            <div class="t1 text-dark">VOCÊ VAI ENCONTRAR NA MARKO</div>
+            <div class="t2 text-dark-sub">Produtos de qualidade imcomparável</div>
+        </span>
+    </div>
+    <div class="blog section flex center">
+        <div class="flex ver center surface--bg shadow--small" onclick="window.location.href='produtos'">
+            <div class="image" style="background-image: url('images/par_01.png')"></div>
+            <div class="content flex ver text-light no-select">
+                <span class="title text-primary">AUTOMAÇÃO COMERCIAL</span><br>
+                <span class="subtitle text-dark">Soluções eficientes e produtivas em tecnologia para o seu negócio</span>
+            </div>
+        </div>
+        <div class="flex ver center surface--bg shadow--small" onclick="window.location.href='produtos'">
+            <div class="image" style="background-image: url('images/par_02.png')"></div>
+            <div class="content flex ver text-light no-select">
+                <span class="title text-primary">AUTOMAÇÃO COMERCIAL</span><br>
+                <span class="subtitle text-dark">Soluções eficientes e produtivas em tecnologia para o seu negócio</span>
+            </div>
+        </div>
+        <div class="flex ver center surface--bg shadow--small" onclick="window.location.href='produtos'">
+            <div class="image" style="background-image: url('images/par_03.png')"></div>
+            <div class="content flex ver text-light no-select">
+                <span class="title text-primary">AUTOMAÇÃO COMERCIAL</span><br>
+                <span class="subtitle text-dark">Soluções eficientes e produtivas em tecnologia para o seu negócio</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Social -->
+    <div id="social" class="section--strech flex ver center parallax">
+        <div id="social-bg" class="parallax-bg"></div>
+        <div id="social-content" class="section flex ver center parallax-content">
+            <div class="title text-light">VENHA SEGUIR A MARKO</div>
+            <div class="subtitle text-light">Nós amamos o nosso trabalho e queremos mostrar isso pra você</div>
+            <hr style="border-color : white">
+            <div id="social_icons">
+                <img src="images/whats-white.svg"/>
+                <img src="images/insta-white.svg"/>
+                <img src="images/face-white.svg"/>
+                <img src="images/tube-white.svg"/>
+            </div>
+        </div>
+    </div>
+
+    <!-- Destaque -->
+    <div class="section--strech flex ver center surface--bg">
+        <span class="page-title flex ver center showup">
+            <div class="t1 text-dark">CONFIRA NOSSAS OFERTAS</div>
+            <div class="t2 text-dark-sub">Produtos em promoção com duração limitada, aproveite !</div>
+        </span>
+    </div>
+
+    <!-- Solution -->
+    <div id="solution" class="section--strech flex ver center parallax">
+        <div id="solution-bg" class="parallax-bg"></div>
+        <div id="solution-content" class="section flex ver center parallax-content">
+            <div class="title text-light">MARKO SOLUTION</div>
+            <div class="subtitle text-light">Soluções para otimizar os negócios da sua empresa, aliando conhecimento tecnológico, qualidade nos serviços prestados e o alto desempenho no atendimento na sua empresa.</div>
+            <hr style="border-color : white">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect light--btn">CONHECER</button>
+        </div>
+    </div>
+
+    <!-- Informações -->
+    <div id="info" class="section--strech flex ver centerH surface--bg">
+        <div class="section flex ver centerH">
+            <span class="page-title flex ver center showup">
+                <div class="t1 text-dark">SOLUÇÕES E INOVAÇÕES</div>
+                <div class="t2 text-dark-sub">A <b class="marko text-primary">MARKO</b> sempre está na liderança</div>
+            </span>
+            <div class="t3 text-dark-sub showup" style="align-self: stretch">
+                Com a experiência adquirida ao longo de 30 anos no mercado, a Marko tem como referencial ser fornecedora de soluções em informática,
+                locação e venda de impressoras, suprimentos para Impressão, papelaria e móveis para o Segmento Corporativo, com prioridade em atender
+                requerimentos e necessidades de nossos clientes com Projetos e Soluções Personalizadas
+            </div>
+            <div class="four-pass showup">
+                <div class="sec flex center">
+                    <div class="flex hor center">
+                        <div class="image surface--bg shadow--small flex center"><img src="images/missao.svg"/></div>
+                        <div class="content flex ver">
+                            <div class="title">Missão</div>
+                            <div class="subtitle">Fornecer produtos e serviços de tecnologia e mobiliário, procurando inovações com responsabilidade, satisfação e reconhecimento</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sec flex center">
+                    <div class="flex hor center">
+                        <div class="image surface--bg shadow--small flex center"><img src="images/visao.svg"/></div>
+                        <div class="content flex ver">
+                            <div class="title">Visão</div>
+                            <div class="subtitle">Crescer comercializando equipamentos, móveis, suprimentos e serviços na área de tecnologia com referência confiável e sustentável</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sec flex center">
+                    <div class="flex hor center">
+                        <div class="image surface--bg shadow--small flex center"><img src="images/valores.svg"/></div>
+                        <div class="content flex ver">
+                            <div class="title">Valores</div>
+                            <div class="subtitle">Integridade, honestidade, responsábilidade, compromissos, resultados e entregar qualidade a seus clientes</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sec flex center">
+                    <div class="flex hor center">
+                        <div class="image surface--bg shadow--small flex center"><img src="images/responsabilidade.svg"/></div>
+                        <div class="content flex ver">
+                            <div class="title">Responsabilidade</div>
+                            <div class="subtitle">Cumprir todos os critérios necessários em uma empresa, no objetivo de honrar com todos os compromissos</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="video flex center shadow--medium">
+            <div>
+                <div id="main-video"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filiais -->
+    <div id="filial" class="section--strech flex ver center background--bg">
+        <span class="page-title flex ver center showup">
+            <div class="t1 text-dark">NOSSAS FILIAIS</div>
+            <div class="t2 text-dark-sub">Encontre uma <b class="marko">MARKO</b> próxima de você</div>
+        </span>
+        <div class="filiais showup">
+            <div class="filial flex ver surface--bg shadow--medium">
+                <img src="images/filial_01.jpg">
+                <div class="text flex ver center">
+                    <div class="title text-dark">MARKO INFORMÁTICA</div>
+                    <hr>
+                    <div class="subtitle text-dark-sub">86 2106-5000</div>
+                </div>
+                <div class="text-over flex ver center" style="background-color: rgba(63,81,181,0.75)">
+                    <div class="title text-light">Rua Dr. Area Leão, 278<br>Centro Norte - Teresina PI</div>
+                    <hr>
+                    <div class="subtitle text-light-sub"><img src="images/whats-white.svg"><img src="images/face-white.svg"><img src="images/insta-white.svg"></div>
+                </div>
+            </div>
+            <div class="filial flex ver surface--bg shadow--medium">
+                <img src="images/filial_02.jpg">
+                <div class="text flex ver center">
+                    <div class="title text-dark">MARKO SOLUTION</div>
+                    <hr>
+                    <div class="subtitle text-dark-sub">86 2106-5010</div>
+                </div>
+                <div class="text-over flex ver center" style="background-color: rgba(92,166,79,0.75)">
+                    <div class="title text-light">Rua Eliseu Martins, 1805<br>Centro Norte - Teresina PI</div>
+                    <hr>
+                    <div class="subtitle text-light-sub"><img src="images/whats-white.svg"><img src="images/face-white.svg"><img src="images/insta-white.svg"></div>
+                </div>
+            </div>
+            <div class="filial flex ver surface--bg shadow--medium">
+                <img src="images/filial_03.jpg">
+                <div class="text flex ver center">
+                    <div class="title text-dark">MARKO FLORIANO</div>
+                    <hr>
+                    <div class="subtitle text-dark-sub">89 3521-2940</div>
+                </div>
+                <div class="text-over flex ver center"  style="background-color: rgba(92,166,79,0.75)">
+                    <div class="title text-light">Rua São João, 480, <br>Sala 01 - Centro Floriano PI</div>
+                    <hr>
+                    <div class="subtitle text-light-sub"><img src="images/whats-white.svg"><img src="images/face-white.svg"><img src="images/insta-white.svg"></div>
+                </div>
+            </div>
+            <div class="filial flex ver surface--bg shadow--medium">
+                <img src="images/filial_04.jpg">
+                <div class="text flex ver center">
+                    <div class="title text-dark">MARKO CEASA</div>
+                    <hr>
+                    <div class="subtitle text-dark-sub">89 2106-5000</div>
+                </div>
+                <div class="text-over flex ver center"  style="background-color: rgba(92,166,79,0.75)">
+                    <div class="title text-light">Nova CEASA<br>Parque São João - Teresina PI</div>
+                    <hr>
+                    <div class="subtitle text-light-sub"><img src="images/whats-white.svg"><img src="images/face-white.svg"><img src="images/insta-white.svg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div id="footer">
+    <div id="rodape" class="flex ver center footer--bg">
+        <div class="section">
+            <div class="group">
+                <div class="title text-light">MARKO INFORMÁTICA</div>
+                <div class="subtitle s space text-light-sub">Pode contar com a gente</div>
+                <div class="subtitle s text-light">Rua Dr. Area Leão, 278 N, Praça Fripisa</div>
+                <div class="subtitle s space text-light-sub">Expediente: 8h às 18h</div>
+                <div class="subtitle g text-light">86.2106-5000</div>
+                <div class="subtitle m text-light-sub">marketing@grupomarko.com.br</div>
+            </div>
+            <div class="group">
+                <div class="title space text-light">Novos Produtos</div>
+                <a href="detalhe" class="no-link">
+                    <div class="subtitle m text-light">Impressora exemplo</div>
+                    <div class="subtitle s text-light-sub space">Descrição simples da impressora exemplo</div>
+                </a>
+                <a href="detalhe" class="no-link">
+                    <div class="subtitle m text-light">Impressora exemplo</div>
+                    <div class="subtitle s text-light-sub space">Descrição simples da impressora exemplo</div>
+                </a>
+                <a href="detalhe" class="no-link">
+                    <div class="subtitle m text-light">Impressora exemplo</div>
+                    <div class="subtitle s text-light-sub space">Descrição simples da impressora exemplo</div>
+                </a>
+            </div>
+            <div class="group large-only">
+                <div class="title space text-light">Informações</div>
+                <div class="subtitle m space text-light">- Termos de Uso</div>
+                <div class="subtitle m space text-light">- Política de Privacidade</div>
+                <div class="subtitle m space text-light">- Contatos</div>
+                <div class="subtitle m text-light">- Sobre</div>
+            </div>
+        </div>
+    </div>
+    <div id="rodape_rodape" class="section--strech flex ver center">
+        <div class="section flex hor">
+            <a href="" class="no-link text-light">© Marko Informática</a>
+            <a href="" class="no-link large-only text-light">Sobre</a>
+            <a href="" class="no-link large-only text-light">Termos de Uso</a>
+            <a href="" class="no-link large-only text-light">Política de Privacidade</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
