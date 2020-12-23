@@ -1,0 +1,170 @@
+doctype html
+html(lang='pt')
+    head
+        meta(charset='utf-8')
+        meta(name='viewport' content='width=device-width, user-scalable=no')
+        meta(http-equiv='X-UA-Compatible' content='IE-EmulateIE7')
+        link(rel='shortcut icon' href='images/favicon.ico')
+        // Jquery
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+        // Jquery UI
+        link(rel='stylesheet' href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css')
+        script(src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js')
+        script(type='text/javascript' src='//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js')
+        // Material Design Lite
+        link(rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons')
+        link(rel='stylesheet' href='https://code.getmdl.io/1.3.0/material.indigo-red.min.css')
+        script(defer='' src='https://code.getmdl.io/1.3.0/material.min.js')
+        // Plugins
+        link(rel='stylesheet' href='styles/slick.css')
+        link(rel='stylesheet' href='styles/slick-theme.css')
+        script(src='scripts/slick.min.js')
+        script(src='scripts/jquery.elevatezoom.js')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js')
+        // Youtube API
+        script(type='text/javascript' src='http://www.youtube.com/player_api')
+        // Page Styles
+        link(rel='stylesheet' href='styles/colors.css')
+        link(rel='stylesheet' href='styles/header.css')
+        link(rel='stylesheet' href='styles/footer.css')
+        link(rel='stylesheet' href='styles/pcards.css')
+        link(rel='stylesheet' href='styles/' + name + '.css')
+        // Page Scripts
+        script(src='scripts/header.js')
+        script(src='scripts/' + name + '.js')
+        title Marko Informática
+        link(href='https://fonts.googleapis.com/css?family=Parisienne&display=swap' rel='stylesheet')
+
+        block extra_head
+    body.background--bg
+        if type === 'HOME'
+            // Home
+            #header
+                .header-top.primary-dark--bg.large-only
+                #header-bar.header-row.large-only
+                    a.flex.center.logo(href='index')
+                        img#header-logo(src='images/logo_branco.png' alt='MARKO')
+                    .space
+                    a.no-link.item.text-light(href='index', class=(page === 'HOME' ? 'header-selected' : '')) Marko
+                    a.no-link.item.text-light(href='solution', class=(page === 'HOME' ? 'header-selected' : '')) Solution
+                    a.no-link.item.text-light(href='produtos', class=(page === 'PROD' ? 'header-selected' : '')) Produtos
+                    a.no-link.item.text-light(href='info', class=(page === 'INFO' ? 'header-selected' : '')) Informações
+                    a.no-link.item.text-light(href='login', class=(page === 'LOGI' ? 'header-selected' : '')) Entrar
+                    a.no-link.item.text-light.sell(href='carrinho', class=(page === 'CART' ? 'header-selected' : ''))
+                        i.material-icons shopping_cart
+                #header-bar-home.header-row.small-only
+                    #debug
+                    button.small-only.mdl-button.mdl-js-button.mdl-button--icon.sell(onclick="window.location.href='carrinho'")
+                        i.material-icons.mdl-badge.mdl-badge--overlap.text-light(data-badge='1') shopping_cart
+            button#hamburger.small-only.mdl-button.mdl-js-button.mdl-button--icon
+                i.material-icons.text-light dehaze
+        else if type === 'SEARCH'
+            // Search
+            #header
+                .header-top.primary-dark--bg.large-only
+                #header-bar.header-row.large-only
+                    a.flex.center.logo(href='index')
+                        img(src='images/logo_branco.png' alt='MARKO')
+                    .space
+                    a.no-link.item.text-light(href='index', class=(page === 'HOME' ? 'header-selected' : '')) Marko
+                    a.no-link.item.text-light(href='solution', class=(page === 'HOME' ? 'header-selected' : '')) Solution
+                    a.no-link.item.text-light(href='produtos', class=(page === 'PROD' ? 'header-selected' : '')) Produtos
+                    a.no-link.item.text-light(href='info', class=(page === 'INFO' ? 'header-selected' : '')) Informações
+                    a.no-link.item.text-light(href='login', class=(page === 'LOGI' ? 'header-selected' : '')) Entrar
+                    a.no-link.item.text-light.sell(href='carrinho', class=(page === 'CART' ? 'header-selected' : ''))
+                        i.material-icons shopping_cart
+                .flex.ver.primary--bg.shadow--medium
+                    .header-row.small-only
+                        button.small-only.mdl-button.mdl-js-button.mdl-button--icon.sell(onclick="window.location.href='carrinho'")
+                            i.material-icons.mdl-badge.mdl-badge--overlap.text-light(data-badge='1') shopping_cart
+                    .header-row.filters.small-only
+                        button.small-only.mdl-button.mdl-js-button.mdl-button--icon.btn-filter
+                            i.material-icons.text-light filter_list
+            button#hamburger.small-only.mdl-button.mdl-js-button.mdl-button--icon
+                i.material-icons.text-dark dehaze
+        else
+            // Default
+            #header
+                .header-top.primary-dark--bg.large-only
+                #header-bar.shadow.header-row.large-only
+                    a.flex.center.logo(href='index')
+                        img(src='images/logo_branco.png' alt='MARKO')
+                    .space
+                    a.no-link.item.text-light(href='index', class=(page === 'HOME' ? 'header-selected' : '')) Marko
+                    a.no-link.item.text-light(href='solution', class=(page === 'HOME' ? 'header-selected' : '')) Solution
+                    a.no-link.item.text-light(href='produtos', class=(page === 'PROD' ? 'header-selected' : '')) Produtos
+                    a.no-link.item.text-light(href='info', class=(page === 'INFO' ? 'header-selected' : '')) Informações
+                    a.no-link.item.text-light(href='login', class=(page === 'LOGI' ? 'header-selected' : '')) Entrar
+                    a.no-link.item.text-light.sell(href='carrinho', class=(page === 'CART' ? 'header-selected' : ''))
+                        i.material-icons shopping_cart
+                .flex.ver.primary--bg.shadow--medium
+                    .header-row.small-only
+                        button.small-only.mdl-button.mdl-js-button.mdl-button--icon.sell(onclick="window.location.href='carrinho'")
+                            i.material-icons.mdl-badge.mdl-badge--overlap.text-light(data-badge='1') shopping_cart
+            button#hamburger.small-only.mdl-button.mdl-js-button.mdl-button--icon
+                i.material-icons.text-light dehaze
+        // Drawer
+        #drawer.shadow--mediumr.surface--bg.small-only(style='left : -256px')
+            .header.surface--bg
+            hr
+            .nav.flex.ver.surface--bg
+                a.no-link.flex.hor(href='index')
+                    i.material-icons.text-dark-sub home
+                    span.text-dark Marko
+                a.no-link.flex.hor(href='solution')
+                    i.material-icons.text-dark-sub assessment
+                    span.text-dark Solution
+                a.no-link.flex.hor(href='produtos')
+                    i.material-icons.text-dark-sub dashboard
+                    span.text-dark Produtos
+                a.no-link.flex.hor(href='info')
+                    i.material-icons.text-dark-sub info
+                    span.text-dark Informações
+                a.no-link.flex.hor(href='login')
+                    i.material-icons.text-dark-sub account_circle
+                    span.text-dark Entrar
+                a.no-link.flex.hor.sell(href='carrinho')
+                    i.material-icons.text-dark-sub shopping_cart
+                    span.text-dark Carrinho
+        #drawer-block.small-only(style='opacity : 0; display : none;')
+        #whatss.surface--bg.shadow--medium.flex.hor.center.text-light(style='background-color: #0DC143' onclick="window.open('https://wa.me/5586981782694')")
+            img(src='images/whats-ico.svg')
+            span.text
+                | Atendimento
+                br
+                | Whatsapp
+        block content
+        // Footer
+        #footer
+            #rodape.flex.ver.center.footer--bg
+                .section
+                    .group
+                        .title.text-light MARKO INFORMÁTICA
+                        .subtitle.s.space.text-light-sub Pode contar com a gente
+                        .subtitle.s.text-light Rua Dr. Area Leão, 278 N, Praça Fripisa
+                        .subtitle.s.space.text-light-sub Expediente: 8h às 18h
+                        .subtitle.g.text-light 86.2106-5000
+                        .subtitle.m.text-light-sub marketing@grupomarko.com.br
+                    .group
+                        .title.space.text-light Novos Produtos
+                        a.no-link(href='detalhe')
+                            .subtitle.m.text-light Impressora exemplo
+                            .subtitle.s.text-light-sub.space Descrição simples da impressora exemplo
+                        a.no-link(href='detalhe')
+                            .subtitle.m.text-light Impressora exemplo
+                            .subtitle.s.text-light-sub.space Descrição simples da impressora exemplo
+                        a.no-link(href='detalhe')
+                            .subtitle.m.text-light Impressora exemplo
+                            .subtitle.s.text-light-sub.space Descrição simples da impressora exemplo
+                    .group.large-only
+                        .title.space.text-light Informações
+                        .subtitle.m.space.text-light - Termos de Uso
+                        .subtitle.m.space.text-light - Política de Privacidade
+                        .subtitle.m.space.text-light - Contatos
+                        .subtitle.m.text-light - Sobre
+            #rodape_rodape.section--strech.flex.ver.center
+                .section.flex.hor
+                    a.no-link.text-light(href='') © Marko Informática
+                    a.no-link.large-only.text-light(href='') Sobre
+                    a.no-link.large-only.text-light(href='') Termos de Uso
+                    a.no-link.large-only.text-light(href='') Política de Privacidade

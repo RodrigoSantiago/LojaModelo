@@ -1,0 +1,253 @@
+extends layout
+block extra_head
+    script(src="scripts/typewritter.min.js")
+        
+block content
+    .page-content.flex.ver.center
+        // Inicio
+        .banners
+            .banners-container
+                .banner.no-select(style="z-index:2; background: url('images/solution_header_bg.jpg') center center; background-size: cover; ")
+            .banners-title.flex.ver.center(style="background: url('images/solution_header_gradient.png') center center; background-size: 100% 100%; ")
+                div(style="background : url('images/pattern.png') repeat; position : absolute; left : 0; right : 0; bottom : 0; top : 0; z-index : -1")
+                .box.flex
+                    #solution-text.text.no-select
+                        | soluções inteligentes
+                .button.flex.hor.center VER MAIS
+        // Inicio
+        #start.section.infinity.flex.ver.center
+            .categories.flex.hor.center
+                .category.flex.ver.center.surface--bg.shadow--medium(onclick="window.location.href='produtos'")
+                    span.flex.ver.text-light.no-select
+                        img(src='images/solution_icons_01.png')
+                        span.title.text-primary AUTOMAÇÃO COMERCIAL
+                        br
+                        span.subtitle.text-dark Soluções eficientes e produtivas em tecnologia para o seu negócio
+                .category.flex.ver.center.surface--bg.shadow--medium(onclick="window.location.href='produtos'")
+                    span.flex.ver.text-light.no-select
+                        img(src='images/solution_icons_02.png')
+                        span.title.text-primary GESTÃO DE PESSOAS
+                        br
+                        span.subtitle.text-dark Soluções eficientes e produtivas em tecnologia para o seu negócio
+                .category.flex.ver.center.surface--bg.shadow--medium(onclick="window.location.href='produtos'")
+                    span.flex.ver.text-light.no-select
+                        img(src='images/solution_icons_03.png')
+                        span.title.text-primary LOCAÇÃO
+                        br
+                        span.subtitle.text-dark Soluções eficientes e produtivas em tecnologia para o seu negócio
+        // Trabalho
+        #work.flex.ver.center.surface--bg
+            .items.section.infinity.flex.ver
+                .line.flex.hor
+                    .item.flex.hor
+                        .icon
+                            img(src='images/solution_icons_03.png')
+                        .content.flex.ver
+                            .title.text-dark Titulo
+                            .subtitle.text-dark-sub Conteúdo explicativo de até 3 linhas de quebra
+                    .item.flex.hor
+                        .icon
+                            img(src='images/solution_icons_03.png')
+                        .content.flex.ver
+                            .title.text-dark Titulo
+                            .subtitle.text-dark-sub Conteúdo explicativo de até 3 linhas de quebra
+                .line.flex.hor
+                    .item.flex.hor
+                        .icon
+                            img(src='images/solution_icons_03.png')
+                        .content.flex.ver
+                            .title.text-dark Titulo
+                            .subtitle.text-dark-sub Conteúdo explicativo de até 3 linhas de quebra
+                    .item.flex.hor
+                        .icon
+                            img(src='images/solution_icons_03.png')
+                        .content.flex.ver
+                            .title.text-dark Titulo
+                            .subtitle.text-dark-sub Conteúdo explicativo de até 3 linhas de quebra
+                .line.flex.hor
+                    .item.flex.hor
+                        .icon
+                            img(src='images/solution_icons_03.png')
+                        .content.flex.ver
+                            .title.text-dark Titulo
+                            .subtitle.text-dark-sub Conteúdo explicativo de até 3 linhas de quebra
+                    .item.flex.hor
+                        .icon
+                            img(src='images/solution_icons_03.png')
+                        .content.flex.ver
+                            .title.text-dark Titulo
+                            .subtitle.text-dark-sub Conteúdo explicativo de até 3 linhas de quebra
+            .bgimg.flex.hor
+                .icon
+        // Blog
+        .section--strech.flex.ver.center
+            span.page-title.flex.ver.center.showup
+                .t1.text-dark VOCÊ VAI ENCONTRAR NA MARKO
+                .t2.text-dark-sub Produtos de qualidade imcomparável
+        .blog.section.flex.center
+            .flex.ver.center.surface--bg.shadow--small(onclick="window.location.href='produtos'")
+                .image(style="background-image: url('images/par_01.png')")
+                .content.flex.ver.text-light.no-select
+                    span.title.text-primary AUTOMAÇÃO COMERCIAL
+                    br
+                    span.subtitle.text-dark Soluções eficientes e produtivas em tecnologia para o seu negócio
+            .flex.ver.center.surface--bg.shadow--small(onclick="window.location.href='produtos'")
+                .image(style="background-image: url('images/par_02.png')")
+                .content.flex.ver.text-light.no-select
+                    span.title.text-primary AUTOMAÇÃO COMERCIAL
+                    br
+                    span.subtitle.text-dark Soluções eficientes e produtivas em tecnologia para o seu negócio
+            .flex.ver.center.surface--bg.shadow--small(onclick="window.location.href='produtos'")
+                .image(style="background-image: url('images/par_03.png')")
+                .content.flex.ver.text-light.no-select
+                    span.title.text-primary AUTOMAÇÃO COMERCIAL
+                    br
+                    span.subtitle.text-dark Soluções eficientes e produtivas em tecnologia para o seu negócio
+        // Social
+        #social.section--strech.flex.ver.center.parallax
+            #social-bg.parallax-bg
+            #social-content.section.flex.ver.center.parallax-content
+                .title.text-light VENHA SEGUIR A MARKO
+                .subtitle.text-light Nós amamos o nosso trabalho e queremos mostrar isso pra você
+                hr(style='border-color : white')
+                #social_icons
+                    img(src='images/whats-white.svg')
+                    img(src='images/insta-white.svg')
+                    img(src='images/face-white.svg')
+                    img(src='images/tube-white.svg')
+        // Destaque
+        .section--strech.flex.ver.center.surface--bg
+            span.page-title.flex.ver.center.showup
+                .t1.text-dark CONFIRA NOSSAS OFERTAS
+                .t2.text-dark-sub Produtos em promoção com duração limitada, aproveite !
+        // Solution
+        #solution.section--strech.flex.ver.center.parallax
+            #solution-bg.parallax-bg
+            #solution-content.section.flex.ver.center.parallax-content
+                .title.text-light MARKO SOLUTION
+                .subtitle.text-light
+                    | Soluções para otimizar os negócios da sua empresa, aliando conhecimento tecnológico, qualidade nos serviços prestados e o alto desempenho no atendimento na sua empresa.
+                hr(style='border-color : white')
+                button.mdl-button.mdl-js-button.mdl-button--raised.mdl-js-ripple-effect.light--btn CONHECER
+        // Informações
+        #info.section--strech.flex.ver.centerH.surface--bg
+            .section.flex.ver.centerH
+                span.page-title.flex.ver.center.showup
+                    .t1.text-dark SOLUÇÕES E INOVAÇÕES
+                    .t2.text-dark-sub
+                        | A
+                        b.marko.text-primary MARKO
+                        |  sempre está na liderança
+                .t3.text-dark-sub.showup(style='align-self: stretch')
+                    | Com a experiência adquirida ao longo de 30 anos no mercado, a Marko tem como referencial ser fornecedora de soluções em informática,
+                    | locação e venda de impressoras, suprimentos para Impressão, papelaria e móveis para o Segmento Corporativo, com prioridade em atender
+                    | requerimentos e necessidades de nossos clientes com Projetos e Soluções Personalizadas
+                .four-pass.showup
+                    .sec.flex.center
+                        .flex.hor.center
+                            .image.surface--bg.shadow--small.flex.center
+                                img(src='images/missao.svg')
+                            .content.flex.ver
+                                .title Missão
+                                .subtitle
+                                    | Fornecer produtos e serviços de tecnologia e mobiliário, procurando inovações com responsabilidade, satisfação e reconhecimento
+                    .sec.flex.center
+                        .flex.hor.center
+                            .image.surface--bg.shadow--small.flex.center
+                                img(src='images/visao.svg')
+                            .content.flex.ver
+                                .title Visão
+                                .subtitle
+                                    | Crescer comercializando equipamentos, móveis, suprimentos e serviços na área de tecnologia com referência confiável e sustentável
+                    .sec.flex.center
+                        .flex.hor.center
+                            .image.surface--bg.shadow--small.flex.center
+                                img(src='images/valores.svg')
+                            .content.flex.ver
+                                .title Valores
+                                .subtitle
+                                    | Integridade, honestidade, responsábilidade, compromissos, resultados e entregar qualidade a seus clientes
+                    .sec.flex.center
+                        .flex.hor.center
+                            .image.surface--bg.shadow--small.flex.center
+                                img(src='images/responsabilidade.svg')
+                            .content.flex.ver
+                                .title Responsabilidade
+                                .subtitle
+                                    | Cumprir todos os critérios necessários em uma empresa, no objetivo de honrar com todos os compromissos
+            .video.flex.center.shadow--medium
+                div
+                    #main-video
+        // Filiais
+        #filial.section--strech.flex.ver.center.background--bg
+            span.page-title.flex.ver.center.showup
+                .t1.text-dark NOSSAS FILIAIS
+                .t2.text-dark-sub
+                    | Encontre uma
+                    b.marko MARKO
+                    |  próxima de você
+            .filiais.showup
+                .filial.flex.ver.surface--bg.shadow--medium
+                    img(src='images/filial_01.jpg')
+                    .text.flex.ver.center
+                        .title.text-dark MARKO INFORMÁTICA
+                        hr
+                        .subtitle.text-dark-sub 86 2106-5000
+                    .text-over.flex.ver.center(style='background-color: rgba(63,81,181,0.75)')
+                        .title.text-light
+                            | Rua Dr. Area Leão, 278
+                            br
+                            | Centro Norte - Teresina PI
+                        hr
+                        .subtitle.text-light-sub
+                            img(src='images/whats-white.svg')
+                            img(src='images/face-white.svg')
+                            img(src='images/insta-white.svg')
+                .filial.flex.ver.surface--bg.shadow--medium
+                    img(src='images/filial_02.jpg')
+                    .text.flex.ver.center
+                        .title.text-dark MARKO SOLUTION
+                        hr
+                        .subtitle.text-dark-sub 86 2106-5010
+                    .text-over.flex.ver.center(style='background-color: rgba(92,166,79,0.75)')
+                        .title.text-light
+                            | Rua Eliseu Martins, 1805
+                            br
+                            | Centro Norte - Teresina PI
+                        hr
+                        .subtitle.text-light-sub
+                            img(src='images/whats-white.svg')
+                            img(src='images/face-white.svg')
+                            img(src='images/insta-white.svg')
+                .filial.flex.ver.surface--bg.shadow--medium
+                    img(src='images/filial_03.jpg')
+                    .text.flex.ver.center
+                        .title.text-dark MARKO FLORIANO
+                        hr
+                        .subtitle.text-dark-sub 89 3521-2940
+                    .text-over.flex.ver.center(style='background-color: rgba(92,166,79,0.75)')
+                        .title.text-light
+                            | Rua São João, 480,
+                            br
+                            | Sala 01 - Centro Floriano PI
+                        hr
+                        .subtitle.text-light-sub
+                            img(src='images/whats-white.svg')
+                            img(src='images/face-white.svg')
+                            img(src='images/insta-white.svg')
+                .filial.flex.ver.surface--bg.shadow--medium
+                    img(src='images/filial_04.jpg')
+                    .text.flex.ver.center
+                        .title.text-dark MARKO CEASA
+                        hr
+                        .subtitle.text-dark-sub 89 2106-5000
+                    .text-over.flex.ver.center(style='background-color: rgba(92,166,79,0.75)')
+                        .title.text-light
+                            | Nova CEASA
+                            br
+                            | Parque São João - Teresina PI
+                        hr
+                        .subtitle.text-light-sub
+                            img(src='images/whats-white.svg')
+                            img(src='images/face-white.svg')
+                            img(src='images/insta-white.svg')

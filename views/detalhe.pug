@@ -1,0 +1,122 @@
+extends layout
+
+block content
+    .page-content.flex.ver.centerH
+        #header-bg.section--strech.shadow--medium(style="background-image: url('images/produtos_header_bg.jpg'")
+        .section.line.flex.hor.center
+            a.no-link.flex.hor.center.text-dark-sub.chip(href='index')
+                i.material-icons home
+                | Marko
+            a.no-link.text-dark-sub.chip(href='produtos') Todos os Produtos
+            a.no-link.text-dark-sub.chip(href='produtos?tags='+row['classe'])
+                | #{row["classe"]}
+            a.no-link.text-dark-sub.chip(href='produtos?tags='+row['subclasse'])
+                | #{row["subclasse"]}
+        .section--strech.flex.center
+            .section.flex.ver.center
+                .dblock
+                    .images.surface--bg.shadow--small
+                        #image-show.image.img--bg
+                            img#zoom_01(src='uploads/'+(row["imagens"].length > 0 ? row["imagens"][0] : "vazio.png"), data-zoom-image='uploads/'+(row["imagens"].length > 0 ? row["imagens"][0] : 'vazio.png'))
+                        hr
+                        .galery-wrapper
+                            .galery.flex
+                                each val in row["imagens"]
+                                    .btn.gray--btn(style="background-image: url('uploads/"+ val+"')", onclick="imageShow('uploads/"+val+")'")
+                    .detail.flex.ver
+                        h1.text-dark
+                            | #{row["nome"]}
+                        .title
+                            b.text-dark-sub Disponibilidade :
+                            span.text-dark Sob Consulta
+                        .title
+                            b.text-dark-sub Código do Produto :
+                            span.text-dark
+                                | #{row["shop9_id"]}
+                        .title
+                            b.text-dark-sub Marca :
+                            span.text-dark
+                                | #{row["marca"]}
+                        hr
+                        .description.flex.ver
+                            .flex.hor(style='flex-grow: 1;')
+                                | #{row["descricao"]}
+                            .flex.hor.centerH
+                                  if (row["cores"].length === 0 || row["cores"][0]["nome"] === "NENHUMA")
+                                    |
+                                  else
+                                    | Selecione a cor :
+                                    each val in row["cores"]
+                                        if (val["id"] === row["id"])
+                                            a.description-color.selected(style=val["css"], href="detalhe?id="+val["id"])
+                                        else
+                                            a.description-color(style=val["css"], href="detalhe?id="+val["id"])
+                        .extras.flex.hor
+                            #semjuros.entry.no-select.flex.hor.centerH.hint--bg
+                                i.material-icons.text-light credit_card
+                                span.text-light Sem Juros
+                            #fretegratis.entry.no-select.flex.hor.centerH.hint--bg
+                                i.material-icons.text-light local_shipping
+                                span.text-light Frete Grátis
+                            #garantia.entry.no-select.flex.hor.centerH.hint--bg
+                                i.material-icons.text-light monetization_on
+                                span.text-light Garantia
+                            #suporte.entry.no-select.flex.hor.centerH.hint--bg
+                                i.material-icons.text-light help_outline
+                                span.text-light Suporte
+                            .mdl-tooltip(data-mdl-for='semjuros')
+                                | Sem Juros
+                            .mdl-tooltip(data-mdl-for='fretegratis')
+                                | Frete Grátis
+                            .mdl-tooltip(data-mdl-for='garantia')
+                                | #{row["garantia"]}
+                            .mdl-tooltip(data-mdl-for='suporte')
+                                | Suporte
+                        hr.sell
+                        .final.flex.sell
+                            .text
+                                .price.text-primary R$ 1.200,00
+                                .price2.text-dark-sub
+                                    | ou até 10x de R$ 120,00
+                                    a(href='') [Tabela]
+                            button.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--accent.mdl-js-ripple-effect.btnfinal COMPRAR
+                    .large-extras.flex.ver
+                        .entry.no-select.flex.hor.centerH.hint--bg
+                            i.material-icons.text-light credit_card
+                            span.text-light Sem Juros
+                        .entry.no-select.flex.hor.centerH.hint--bg
+                            i.material-icons.text-light local_shipping
+                            span.text-light Frete Grátis
+                        .entry.no-select.flex.hor.centerH.hint--bg
+                            i.material-icons.text-light monetization_on
+                            span.text-light Garantia
+                        .entry.no-select.flex.hor.centerH.hint--bg
+                            i.material-icons.text-light help_outline
+                            span.text-light Suporte
+                h3.no-margin.text-dark.separator(style='width: 100%') Mais Informações
+                hr.separator
+                .table.surface--bg.shadow--small
+                    main.mdl-layout__content
+                        .mdl-tabs.mdl-js-tabs
+                            .mdl-tabs__tab-bar(style='justify-content: start')
+                                a.mdl-tabs__tab.is-active(href='#tab1-panel') Detalhes
+                                a.mdl-tabs__tab(href='#tab2-panel') Vídeos
+                            #tab1-panel.mdl-tabs__panel.page.is-active
+                                | #{row["detalhes"]}
+                            #tab2-panel.mdl-tabs__panel.page.video
+                                iframe(frameborder='0' height='100%' width='100%' src="https:\\www.youtube.com\\embed\\"+row["video"]+"?controls=0&showinfo=0&autohide=1")
+                h3.no-margin.text-dark.separator(style='width: 100%') Produtos Semelhantes
+                hr.separator
+                .carrosel(style='width: 100%')
+                    .items
+                        each related in relateds
+                            .pcard.surface--bg.shadow--btn.flex.ver(onclick="window.location.href='detalhe?id="+related['id']+"'")
+                                .pimg.surface--bg(style="background-image: url('uploads/"+related["imagem"]+"')")
+                                hr
+                                .pcontent.flex.ver
+                                    .name.text-dark-sub
+                                        | #{related["nome"].substr(0, 1) + related["nome"].substr(1).toLowerCase()}
+                                    .price.text-primary.sell R$ 50,00
+                                    .price-part.text-primary.sell até 10x de R$ 5,00
+                                if related["promocao"]
+                                    .psale.flex.ver.center.sale Promoção

@@ -1,0 +1,48 @@
+extends layout
+
+block content
+    .page-content.flex.ver.centerH
+        #header-bg.section--strech.shadow--medium(style="background-image: url('images/produtos_header_bg.jpg'")
+        .page-title.flex.ver.center
+            span.t1.text-dark Seu Carrinho de Compras
+            span.t2.text-dark-sub Verifique todos os itens comprados e finalize sua compra
+        .section--strech.infinity.flex.center
+            .section.infinity.flex.center
+                #cart-grid
+                    each i in [0, 1, 2, 3, 4, 5]
+                        hr.small-hr
+                        .card.flex.hor.surface--bg.shadow--small
+                            .image.hint--bg
+                                img(src='uploads/img_21103'+(i+1)+'.png')
+                            .content.flex.ver
+                                .title.text-dark Descrição do produto no carrinho
+                                .price.text-dark
+                                    | Preço :
+                                    span.value.text-primary R$ 100,00
+                                .amount.text-dark
+                                    | Quantidade :
+                                    input(value='1' type='number' pattern='[0-9]*' inputmode='numeric')
+                            .close
+                                button.mdl-button.mdl-js-button.mdl-button--icon
+                                    i.material-icons.text-dark close
+        .section--strech.infinity.surface--bg.flex.ver.center
+            .section.infinity.flex.ver.center
+                #checkout-grid
+                    .budget.flex.ver
+                        .title.flex.hor
+                            span Total de Parcelas :
+                            span
+                                input(value='10' type='number' pattern='[0-9]*' inputmode='numeric')
+                        .title.flex.hor
+                            span Valor de Parcelas :
+                            span.text-primary R$ 100,00
+                        .total.flex.hor
+                            span Total :
+                            span.text-primary R$ 1000,00
+                    .carts.flex.hor
+                        .flex.center
+                            img(src='images/cart0.png')
+                        .flex.center
+                            img(src='images/cart1.png')
+            .section.infinity.flex.btn-section
+                button.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--accent.mdl-js-ripple-effect.btn-final FINALIZAR

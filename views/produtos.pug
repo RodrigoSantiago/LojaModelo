@@ -1,0 +1,110 @@
+extends layout
+block content
+    .page-content.flex.ver.centerH.background--bg
+        #header-bg.section--strech(style="background-image: url('images/produtos_header_bg.jpg')")
+        .flex.center.surface--bg.shadow--medium#search
+            .section.flex.centerH
+                .icon.flex
+                    button.mdl-button.mdl-js-button.mdl-button--icon(onclick='search()')
+                        i.material-icons.text-dark-sub search
+                input#search_text(type='text' placeholder='Digite para pesquisar...' value='')
+                .slider.flex.ver.center
+                    .flex.hor.values
+                        span#slider-min R$ 100
+                        span#slider-max R$ 100
+                    #slider-3(style='width: 100%')
+                .icon.filter.flex
+                    button.mdl-button.mdl-js-button.mdl-button--icon.btn-filter
+                        i.material-icons.text-dark-sub filter_list
+        .section--strech.flex.center.tag-chips
+            .section.infinity.flex.hor.wrap
+                each tag in search.tags
+                    .chip.tag-chip.flex
+                        | #{tag}
+                        i.material-icons close
+        h3.text-dark-sub
+            if (prods === 0)
+                | Nenhum Produto Encontrado
+            else if (prods === 1)
+                | 1 Produto Encontrado
+            else
+                | #{prods + ' Produtos Encontrados'}
+        .section--strech.flex.center
+            .section.infinity.pgrid
+                each row, i in assoc
+                    a.pcard.surface--bg.shadow--btn.flex.ver(href="detalhe?id="+row['id'])
+                        .pimg.surface--bg(style="background-image: url('uploads/"+row['imagem']+"')")
+                        hr
+                        .pcontent.flex.ver
+                            .name.text-dark-sub
+                                | #{row['nome']}
+                            .price.text-primary.sell R$ 50,00
+                            .price-part.text-primary.sell até 10x de R$ 5,00
+                        if row["promocao"]
+                            .psale.flex.ver.center.sale Promoção
+        .section--strech
+            .pnav.flex.hor.center
+                    if (pg > 0)
+                        .pcircle.nav.primary--bg.text-light(onclick='navigate("-1")')
+                            i.material-icons.text-light navigate_before
+
+                    - var mark = pg
+                    - var str = [0, 1, 2, 3, 4]
+                    if (pages > 5)
+                         - str[0] = 0
+                         if (pg < 3)
+                             - str[1] = 1
+                             - str[2] = 2
+                             - str[3] = 3
+                         else if (pg >= pages - 2)
+                             - str[1] = (pages - 4)
+                             - str[2] = (pages - 3)
+                             - str[3] = (pages - 2)
+                             - mark = 5 + (pg - pages)
+                         else
+                             - str[1] = (pg - 1)
+                             - str[2] = (pg)
+                             - str[3] = (pg + 1)
+                             - mark = 2
+                         - str[4] = (pages - 1)
+
+                    - for (var i = 0; i < 5 && i < pages; i += 1) {
+                        if (i === mark)
+                            .pcircle.primary--bg.text-light(onclick='navigate("'+str[i]+'")')= (str[i] + 1)
+                        else
+                            .pcircle.secondary--bg.text-light(onclick='navigate("'+str[i]+'")')= (str[i] + 1)
+                    - }
+                    if (pg < pages - 1)
+                        .pcircle.nav.primary--bg.text-light(onclick='navigate("+1")')
+                            i.material-icons.text-light navigate_next
+
+        #filter-dialog.surface--bg.shadow--medium.flex.ver(style='display: none')
+            .chips.flex.hor.wrap
+                .chip.filter-chip.no-select.chip-primary.selected(data-chip-group="chip-marcas") Marca
+                each value, key in tags['classes']
+                    - var fix = key.replace(/[^a-zA-Z0-9_]+/g, '').toLowerCase()
+
+                    .chip.filter-chip.no-select.chip-primary(data-chip-group='chip-'+fix) #{key}
+            hr
+
+            #chip-marcas.chip-container.flex.hor.wrap.selected-chip-group
+                each row in tags['marcas']
+                    if search.tags.includes(row)
+                        .chip.filter-chip.no-select.selected #{row}
+                    else
+                        .chip.filter-chip.no-select #{row}
+
+            each value, key in tags['classes']
+                - var fix = key.replace(/[^a-zA-Z0-9_]+/g, '').toLowerCase()
+
+                .chip-container.flex.hor.wrap(id='chip-'+fix)
+                    each subclasse in value
+                        if search.tags.includes(subclasse)
+                            .chip.filter-chip.no-select.selected #{subclasse}
+                        else
+                            .chip.filter-chip.no-select #{subclasse}
+            hr
+            .buttons.flex
+                button.mdl-button.mdl-js-button.mdl-button--accent.mdl-js-ripple-effect.btn-filter-apply(onclick='search()')
+                    | FILTRAR
+        #filter-block(style='display: none')

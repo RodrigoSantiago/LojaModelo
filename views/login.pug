@@ -1,0 +1,68 @@
+extends layout
+
+block content
+    .page-content.flex.ver.centerH
+        #header-bg.section--strech.shadow--medium(style="background-image: url('images/perfil_header_bg.jpg'")
+        h3.sign-up.text-dark-sub(style='display: none') Faça Seu Cadastro
+        .section--strech.flex.center
+            .section.flex.ver.center
+                #sign-up.data-grid.surface--bg.shadow--small(style='display: none')
+                    .fields.flex.ver
+                        span.title.text-primary Nome
+                        input(type='text' value='Nome completo')
+                        span.title.text-primary E-Mail
+                        input(type='text' value='email@mail.com')
+                        .flex.small-fields
+                            .fields.flex.ver
+                                span.title.text-primary Telefone
+                                input(type='text' value='86 3233-3030')
+                            .fields.flex.ver
+                                span.title.text-primary Celular
+                                input(type='text' value='86 9 9955-9595')
+                        span.title.text-primary CPF
+                        input(type='text' value='050.123.456-20')
+                        .flex.small-fields
+                            .fields.flex.ver
+                                span.title.text-primary Senha
+                                input(type='password' value='')
+                            .fields.flex.ver
+                                span.title.text-primary Confirmar Senha
+                                input(type='password' value='')
+                        hr
+                    .flex.ver
+                    .flex.small-fields
+                        .fields.terms
+                            | Ao se cadastrar você concorda com nossos
+                            a(href='') Termos de Uso
+                            |  e
+                            a(href='')  Política de Privacidade
+                        .fields.flex.ver
+                            button.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--accent.mdl-js-ripple-effect.btn-final CADASTRAR
+                    .flex.small-fields
+                        .fields.flex.ver
+                        .fields.flex.ver
+                            button.mdl-button.mdl-js-button.mdl-button--accent.mdl-js-ripple-effect.outline-btn.btn-final(onclick='toSignIn()') POSSUI UMA CONTA?
+                h3.sign-in.text-dark-sub Entre com seu Nome e Senha
+                #sign-in.data-grid.surface--bg.shadow--small
+                    .fields.flex.ver
+                        span.title.text-primary Usuário
+                        input(type='text' value='Nome completo')
+                        span.title.text-primary Senha
+                        input(type='password' value='minha senha')
+                        label.mdl-checkbox.mdl-js-checkbox.mdl-js-ripple-effect.check-conec(for='conectado')
+                            input#conectado.mdl-checkbox__input(type='checkbox' checked='')
+                            span.mdl-checkbox__label Manter Conectado
+                        hr
+                    .flex.ver
+                    .flex.small-fields
+                        .fields.terms
+                            | Ao se entrar você concorda com nossos
+                            a(href='') Termos de Uso
+                            |  e
+                            a(href='')  Política de Privacidade
+                        .fields.flex.ver
+                            button.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--accent.mdl-js-ripple-effect.btn-final(onclick="window.location.href='perfil'") ENTRAR
+                    .flex.small-fields
+                        .fields.flex.ver
+                        .fields.flex.ver
+                            button.mdl-button.mdl-js-button.mdl-button--accent.mdl-js-ripple-effect.outline-btn.btn-final(onclick='toSignUp()') CADASTRAR

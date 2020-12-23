@@ -1,0 +1,127 @@
+extends layout
+
+block content
+    .page-content.flex.ver.centerH
+        #header-bg.section--strech.shadow--medium(style="background-image: url('images/perfil_header_bg.jpg'")
+        .section--strech.flex.ver.center
+            .section.flex.ver
+                h3.text-dark Dados e Configurações
+                .data-grid
+                    .fields.flex.ver
+                        span.title.text-primary Nome
+                        input(type='text' value='Nome completo')
+                        span.title.text-primary E-Mail
+                        input(type='text' value='email@mail.com')
+                        .small-fields.flex
+                            .fields.flex.ver
+                                span.title.text-primary Telefone
+                                input(type='text' value='86 3233-3030')
+                            .fields.flex.ver
+                                span.title.text-primary Celular
+                                input(type='text' value='86 9 9955-9595')
+                        span.title.text-primary CPF
+                        input(type='text' value='050.123.456-20')
+                        span.title.text-primary Senha
+                        input(type='password' value='ABCDEFG')
+                        .flex.small-fields
+                            .fields.flex.ver
+                                span.title.text-primary Nova Senha
+                                input(type='password' value='')
+                            .fields.flex.ver
+                                span.title.text-primary Confirmar Senha
+                                input(type='password' value='')
+                        hr
+                    .fields.flex.ver
+                        .flex.small-fields
+                            .fields.flex.ver
+                                span.title.text-primary CEP
+                                input(type='text' value='6400-000')
+                            .fields.flex.ver
+                                span.title.text-primary Nº
+                                input(type='text' value='1')
+                        .flex.small-fields
+                            .fields.flex.ver
+                                span.title.text-primary Cidade
+                                input(type='text' value='Teresina')
+                            .fields.flex.ver
+                                span.title.text-primary Estado
+                                input(type='text' value='Teresina')
+                        .flex.small-fields
+                            .fields.flex.ver
+                                span.title.text-primary Bairro
+                                input(type='text' value='Centro')
+                            .fields.flex.ver
+                        span.title.text-primary Complemento
+                        input(type='text' value='Complemento')
+                .data-btn.flex.ver
+                    button.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--accent.mdl-js-ripple-effect.btn-final SALVAR
+        .section--strech.flex.ver.center.surface--bg
+            .section.flex.ver
+                h3.text-dark Cartões
+                .card-grid
+                    .flex.hor
+                        .image.flex.center
+                            img(src='images/cart0.png')
+                        .image.flex.center
+                            img(src='images/cart1.png')
+                    .fields.flex.ver
+                        span.title.text-primary Nº
+                        input(type='text' value='Nome completo')
+                        .flex.small-fields
+                            .fields.flex.ver
+                                span.title.text-primary Bandeira
+                                input(type='text' value='MASTER')
+                            .fields.flex.ver
+                                span.title.text-primary Vencimento
+                                input(type='text' value='10/2025')
+                .data-btn.flex.ver
+                    button.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--accent.mdl-js-ripple-effect.btn-final SALVAR CARTÕES
+        .section--strech.flex.ver.center
+            .section.infinity.flex.ver
+                h3.text-dark Histórico de Compras
+                - var arr = [0, 1, 2, 3, 4, 5, 6];
+                - for(var i = 0; i < arr.length; ) {
+                    .hist-grid
+                        each val in (i + 1 < arr.length ? [arr[i], arr[i + 1]] : [arr[i]])
+                            .hist-card.flex.ver.surface--bg.shadow--small
+                                .hist-line.flex.hor
+                                    span.title.text-dark Status :
+                                    if (i % 4 === 0)
+                                        span.content.aprovado Aprovado
+                                    if (i % 4 === 1)
+                                        span.content.concluido Concluído
+                                    if (i % 4 === 2)
+                                        span.content.cancelado Cancelado
+                                    if (i % 4 === 3)
+                                        span.content.emanalise Em Análise
+                                .hist-line.flex.hor
+                                    span.title.text-dark Data :
+                                    span.content.text-dark 10/10/19
+                                .hist-line.flex.hor
+                                    span.title.text-dark Valor :
+                                    span.content.text-primary R$ 1.000,00
+                                .hist-line.flex.hor
+                                    span.title.text-dark Parcelas :
+                                    span.content.text-dark 10x Cartão
+                                .hist-line.flex.hor
+                                    span.title.text-dark Cartão :
+                                    span.content.text-dark MASTER CARD **** 3005
+                                if (i % 4 == 0 || i % 4 == 3)
+                                    .close
+                                        button.mdl-button.mdl-js-button.mdl-button--icon
+                                            i.material-icons.text-dark close
+                                hr
+                                .hist-prod(id='hist-prod_'+i, style='display: none')
+                                    each j in [0, 1, 2, 3, 4, 5, 6]
+                                        if (j <= i)
+                                            .hist-line.flex.hor
+                                                span.name Nome do produto em apenas 1 linha
+                                                span.price.text-primary R$ 1,00
+                                    hr
+                                .hist-card-btn.flex.hor
+                                    button.mdl-button.mdl-js-button.mdl-button--icon(data-hist-btn='hist-prod_'+i)
+                                        i.material-icons keyboard_arrow_down
+                            - i++
+                -}
+        .section--strech.flex.center
+            .section.flex.btn-section

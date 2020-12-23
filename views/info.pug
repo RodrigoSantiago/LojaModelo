@@ -1,0 +1,55 @@
+extends layout
+block extra_head
+    link(rel="stylesheet", href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css",
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==", crossorigin="")
+    script(src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js",
+    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin="")
+
+block content
+    .page-content.flex.ver.centerH
+        #header-bg.section--strech.shadow--medium(style="background-image: url('images/info_header_bg.jpg'")
+        .page-title.flex.ver.center
+            span.t1.text-dark
+                | Ligue ou Venha Conhecer a
+                b  MARKO
+            span.t2.text-dark-sub Estamos esperando por você
+        .section--strech.flex.center
+            .section.flex.ver.center
+                #map
+                    iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2810.114949857797!2d-42.8124248574191!3d-5.087095056277844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x78e39df28f4cae1%3A0x38a4a4a0c7127810!2sMarko+Inform%C3%A1tica!5e0!3m2!1spt-BR!2sbr!4v1478782087591' width='100%' height='100%' frameborder='0' style='border:0' allowfullscreen='')
+        .group.section.flex.center
+            .info_group.flex.centerH.shadow--medium
+                .info_left.flex.ver.surface--bg
+                    .title.text-primary Localização
+                    .subtitle.text-dark-sub Rua Doutor Area Leão, 278 Centro Norte
+                    .title.text-primary Telefone
+                    .subtitle.text-dark-sub 86 2106.5000
+                    .title.text-primary Whatsapp
+                    .subtitle.text-dark-sub 86 9 9599-9955
+                    .title.text-primary E-Mail
+                    .subtitle.text-dark-sub marketing@grupomarko.com.br
+                    .social.flex.hor.center
+                        img(src='images/whats-circle.svg' alt='?')
+                        img(src='images/insta-circle.svg' alt='?')
+                        img(src='images/face-circle.svg' alt='?')
+                        img(src='images/tube-circle.svg' alt='?')
+                .info_right.flex.ver.primary--bg
+                    form(action='#')
+                        .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label.text-light
+                            input#name.mdl-textfield__input(type='text')
+                            label.mdl-textfield__label(for='name') Nome
+                        .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+                            input#email.mdl-textfield__input(type='text')
+                            label.mdl-textfield__label(for='email') E-Mail
+                        .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+                            input#phone.mdl-textfield__input(type='text')
+                            label.mdl-textfield__label(for='phone') Telefone
+                        .mdl-textfield.mdl-js-textfield
+                            textarea#message.mdl-textfield__input(type='text' rows='5')
+                            label.mdl-textfield__label(for='message') Mensagem
+                        .terms.text-light
+                            | Enviando a mensagem você concorda com nossos
+                            a.no-link.text-secondary(href='') Termos De Uso
+                            |  e
+                            a.no-link.text-secondary(href='') Política De Privacidade
+                        button.mdl-button.mdl-js-button.mdl-button--raised.mdl-button--accent.mdl-js-ripple-effect.btnfinal ENVIAR
